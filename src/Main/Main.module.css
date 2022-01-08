@@ -1,4 +1,17 @@
-.main {
-  width: 300px;
+.mainblock {
+    height: 100vh;
+    background-color: mistyrose;
+}
 
+.about {
+    width: 300px;
+    /*height: 100%;*/
+    background-color: gray;
+}
+
+.photo {
+    width: 300px;
+    /*height: 400px;*/
+    height: 55%;
+    background-color: #bebbbb;
 }

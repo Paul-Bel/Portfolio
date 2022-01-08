@@ -1,0 +1,63 @@
+.skillBlock {
+    height: 100vh;
+    background-color: darkseagreen;
+    display: flex;
+}
+
+.container {
+    /*flex-direction: column;*/
+}
+
+.header {
+    margin: 0 auto;
+}
+
+.skills {
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.containerSkill {
+    border: 1px solid;
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutSkill {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between
+}
+
+
+.img {
+    height: 40%;
+
+
+}
+.border{
+    border: 1px solid;
+    width: 60%;
+    height: 60%;
+}
+.imgText {
+    height: 60%;
+}
+
+.about {
+    height: 55%;
+    width: 100%;
+    border: 1px solid;
+}
