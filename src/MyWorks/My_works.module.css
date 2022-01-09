@@ -1,0 +1,53 @@
+.block {
+    height: 100vh;
+    background-color: #ecc1c4;
+}
+
+.header {
+
+}
+
+.title {
+    border: 1px solid;
+    width: 100%;
+    text-align: center;
+}
+
+.content {
+    min-height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.work {
+    border: 1px solid;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    text-align: center;
+
+}
+
+.img {
+    height: 65%;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about {
+    height: 34%;
+}
+
+.button {
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}

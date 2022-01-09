@@ -7,11 +7,11 @@
 }
 
 .container {
-    /*display: flex;*/
-    /*align-content: center;*/
-    /*flex-wrap: wrap;*/
-    /*flex-direction: column;*/
-    /*justify-content: space-around*/
+    display: flex;
+    align-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .skillItem {
     margin: 0 auto;
@@ -26,7 +26,7 @@
     /*    width: 100%;*/
     display: flex;
     flex-wrap: wrap;
-    /*flex-wrap: wrap;*/
+    justify-content: center;
 }
 
 .skill {
