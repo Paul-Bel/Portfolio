@@ -46,6 +46,7 @@
     justify-content: space-around;
     align-content: center;
     border: 1px solid;
+    padding-left: 7px;
 }
 
 .button {
