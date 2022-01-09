@@ -1,0 +1,24 @@
+.block {
+    height: 35vh;
+    background-color: #a5c975;
+
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid;
+    text-align: center;
+    min-height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.click {
+
+}

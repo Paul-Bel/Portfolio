@@ -1,5 +1,4 @@
 import s from './My_works.module.css'
-import stylesContainer from "../common/styles/Container.module.css";
 
 type WorkPropsType = { title: string, about: string }
 
