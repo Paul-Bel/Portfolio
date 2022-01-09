@@ -5,6 +5,7 @@ import {Main} from "./Main/Main";
 import {Skills} from "./Skills/Skills";
 import {My_works} from "./MyWorks/My_works";
 import {Work_remotely} from "./common/Work_remotely/Work_remotely";
+import {Contacts} from "./Contacts/Contacts";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <Skills/>
             <My_works/>
             <Work_remotely/>
+            <Contacts/>
         </div>
     );
 }
