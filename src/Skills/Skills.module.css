@@ -28,27 +28,20 @@
 }
 
 .skill {
-    /*min-width: 250px    ;*/
-    /*max-width: 250px    ;*/
     width: 270px;
-    /*background-color: mistyrose;*/
-    /*width: 30%;*/
-    /*min-height: 80%;*/
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*flex-wrap: wrap;*/
-    /*align-content: flex-start;*/
     align-items: center;
-
+    border: 1px solid;
+    margin: 5px;
 }
 
 .icon {
+    margin: 0 auto;
     background-color: gray;
     min-height: 80px;
-    min-height: 80px;
-    margin: 5px auto;
+    width: 35%;
+    align-items: center;
+    text-align: center;
 }
-
 .about {
     display: flex;
     flex-direction: column;
