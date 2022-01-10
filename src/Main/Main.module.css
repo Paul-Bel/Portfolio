@@ -5,13 +5,11 @@
 
 .about {
     min-width: 35%;
-    /*height: 100%;*/
     background-color: gray;
 }
 
 .photo {
     width: 300px;
-    /*height: 400px;*/
-    height: 55%;
+    min-height: 55%;
     background-color: #bebbbb;
 }
