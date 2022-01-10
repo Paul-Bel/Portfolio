@@ -12,6 +12,7 @@
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-around;
+    margin: 5%;
 }
 .skillItem {
     margin: 0 auto;

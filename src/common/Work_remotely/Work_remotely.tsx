@@ -1,5 +1,4 @@
 import React from "react";
-import stylesContainer from '../styles/Container.module.css'
 import s from './Work_remotely.module.css'
 
 export const Work_remotely = () => {
@@ -12,7 +11,7 @@ export const Work_remotely = () => {
                     considering options for remote work
                 </div>
                 <div className={s.click}>
-<button>hire me</button>
+                    <button>hire me</button>
                 </div>
 
 

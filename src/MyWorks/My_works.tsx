@@ -5,13 +5,15 @@ import {My_work} from "./My_work";
 
 export const My_works = () => {
     const [work, setWork] = useState([
-        {id: 1, title: 'Todolist', about: 'project lorem' },
-        {id: 1, title: 'Social Network', about: 'about project lorem about project lorem about project lorem\n' +
-                '    about project lorem about project lorem about project lorem'},
+        {id: 1, title: 'Todolist', about: 'project lorem'},
+        {
+            id: 1, title: 'Social Network', about: 'about project lorem about project lorem about project lorem\n' +
+                '    about project lorem about project lorem about project lorem'
+        },
     ])
-const works = work.map(el => {
-    return (<My_work key={el.id} title={el.title} about={el.about}/>)
-})
+    const works = work.map(el => {
+        return (<My_work key={el.id} title={el.title} about={el.about}/>)
+    })
 
     return (
         <div className={s.block}>

@@ -1,14 +1,20 @@
 .block {
     min-height: 100vh;
     background-color: #ecc1c4;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .header {
+    background-color: #ecc1c4;
+    margin: 5%;
+
 
 }
 
 .title {
-    border: 1px solid;
+    border-bottom: 1px solid;
     width: 100%;
     text-align: center;
 }

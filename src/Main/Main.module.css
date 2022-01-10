@@ -4,12 +4,13 @@
 }
 
 .about {
-    min-width: 300px;
+    min-width: 280px;
     background-color: gray;
 }
 
 .photo {
-    width: 300px;
+    width: 280px;
+    height: 400px;
     min-height: 55%;
     background-color: #bebbbb;
 }
