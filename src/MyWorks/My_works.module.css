@@ -1,5 +1,5 @@
 .block {
-    height: 100vh;
+    min-height: 100vh;
     background-color: #ecc1c4;
 }
 
@@ -14,26 +14,29 @@
 }
 
 .content {
+    width: 100%;
     min-height: 450px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
+    height: 100%;
 }
 
 .work {
     border: 1px solid;
     display: inline-flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    width: 350px;
+    width: 270px;
     text-align: center;
-
+    height: 100%;
+    margin: 5px;
 }
 
 .img {
     height: 65%;
+    min-height: 150px;
     border: 1px solid;
     display: flex;
     flex-direction: column;
@@ -43,6 +46,10 @@
 
 .about {
     height: 34%;
+    min-height: 250px;
+}
+.span {
+    height: 150px;
 }
 
 .button {
