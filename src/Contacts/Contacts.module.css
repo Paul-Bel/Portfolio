@@ -27,9 +27,8 @@
     align-content: space-around;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-
 }
 /*test*/
 .title {
@@ -48,6 +47,9 @@
     align-content: center;
     border: 1px solid;
     padding-left: 7px;
+}
+.input input, textarea, button {
+    min-width: 50%;
 }
 
 .button {

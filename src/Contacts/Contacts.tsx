@@ -10,17 +10,18 @@ export const Contacts = () => {
                 className={s.blockContact}
                 >
                 <div className={s.title}><h3>Contacts</h3></div>
-                <div className={s.input}>
+                <form className={s.input}>
                     <input type="text"/>
                     <input type="text"/>
                     <textarea name="" id="" ></textarea>
-                </div>
+                    <button type={"submit"}>send</button>
+                </form>
+
+                {/*<div className={s.button}>*/}
+                {/*    */}
+                {/*</div>*/}
 
 
-
-                <div className={s.button}>
-                    <button>send</button>
-                </div>
             </div>
         </div>
     )

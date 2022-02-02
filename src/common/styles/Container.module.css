@@ -1,6 +1,5 @@
 .containerMain {
     min-height: 90vh;
-    width: 80%;
     border: 1px solid black;
     margin: 0 auto;
     display: flex;
