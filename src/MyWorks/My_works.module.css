@@ -44,14 +44,28 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
 }
-
+.img::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.3;
+}
+/*.img, hover{*/
+/*    cursor: pointer;*/
+/*    background-color: black;*/
+/*    !*opacity: 0.4;*!*/
+/*}*/
 .about {
     height: 34%;
-    min-height: 250px;
+    /*min-height: 250px;*/
     padding: 25px 20px;
 }
-
 .about h3 {
     font-family: 'Josefin Sans', sans-serif;
     margin-bottom: 15px;
@@ -79,4 +93,6 @@
     height: 50px;
     border-radius: 5px;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
