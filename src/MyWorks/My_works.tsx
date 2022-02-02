@@ -1,19 +1,20 @@
 import s from './My_works.module.css'
 import stylesContainer from "../common/styles/Container.module.css";
-import {useState} from "react";
-import {My_work} from "./My_work";
+import {MyWork} from "./MyWork";
 import {Title} from "../common/components/Title/Title";
+import TDIMG from '../assets/img/Todolist.jpg'
+import Social from '../assets/img/Social.jpg'
 
 export const My_works = () => {
-    const [work, setWork] = useState([
-        {id: 1, title: 'Todolist', about: 'project lorem'},
-        {
-            id: 1, title: 'Social Network', about: 'about project lorem about project lorem about project lorem\n' +
-                '    about project lorem about project lorem about project lorem'
-        },
-    ])
+
+    const work = [
+        {id: 1, title: 'Todolist', about: 'project lorem', divStyle: {backgroundImage: `url(${TDIMG})`}},
+        {id: 2, title: 'Social Network', about: 'about project lorem about project lorem about project lorem\n' +
+                '    about project lorem about project lorem about project lorem', divStyle: {backgroundImage: `url(${Social})`}},
+    ]
+
     const works = work.map(el => {
-        return (<My_work key={el.id} title={el.title} about={el.about}/>)
+        return (<MyWork key={el.id} title={el.title} about={el.about} styleImg={el.divStyle}/>)
     })
 
     return (
