@@ -11,8 +11,9 @@
     align-content: space-between;
     flex-wrap: nowrap;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     margin: 5%;
+    min-width: 90%;
 }
 .skillItem {
     margin: 0 auto;

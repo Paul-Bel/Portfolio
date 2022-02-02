@@ -2,6 +2,7 @@ import s from './My_works.module.css'
 import stylesContainer from "../common/styles/Container.module.css";
 import {useState} from "react";
 import {My_work} from "./My_work";
+import {Title} from "../common/components/Title/Title";
 
 export const My_works = () => {
     const [work, setWork] = useState([
@@ -18,9 +19,10 @@ export const My_works = () => {
     return (
         <div className={s.block}>
             <div className={`${stylesContainer.containerMain} ${s.header}`}>
-                <div className={s.title}>
-                    <h2>My works</h2>
-                </div>
+                <Title title={"My Works"}/>
+                {/*<div className={s.title}>*/}
+                {/*    <h2>My works</h2>*/}
+                {/*</div>*/}
                 <div className={s.content}>
                     {works}
                 </div>

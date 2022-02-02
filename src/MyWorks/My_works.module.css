@@ -12,22 +12,9 @@ color: #fff;
 
 }
 
-.title {
-    border-bottom: 1px solid;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-}
-.title h2{
-    font-family: 'Josefin Sans', sans-serif;
-    margin: 0;
-    font-weight: 300;
-    color: #fff;
-    text-transform: capitalize;
-    /*font: 700 40px/1.2 'Josefin Sans', sans-serif;*/
-}
 
 .content {
+    margin-top: 50px;
     width: 100%;
     min-height: 450px;
     display: flex;
@@ -42,7 +29,7 @@ color: #fff;
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 270px;
+    width: 370px;
     text-align: center;
     height: 100%;
     margin: 5px;
