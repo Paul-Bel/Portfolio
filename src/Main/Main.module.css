@@ -4,6 +4,7 @@
 }
 
 .about {
+
     min-width: 280px;
     background-color: gray;
 }
@@ -13,4 +14,8 @@
     height: 400px;
     min-height: 55%;
     background-color: #bebbbb;
+}
+.text_about{
+    margin: 15px;
+
 }
