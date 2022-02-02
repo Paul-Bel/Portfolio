@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 import s from './Skills.module.css'
 import {Skill} from "./Skill";
 import stylesContainer from "../common/styles/Container.module.css";
 import {Title} from "../common/components/Title/Title";
 
 export const Skills = () => {
-    const [text, setText] = useState([
+    const text = [
         {id: 1, skill: "HTML", about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quis."},
         {id: 2, skill: "CSS", about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quis."},
         {
@@ -13,7 +13,7 @@ export const Skills = () => {
             skill: "React",
             about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At beatae consectetur cupiditate deserunt earum, expedita fuga iste magnam nam, necessitatibus nemo neque nisi, optio provident sed tempore vel veritatis vitae?"
         },
-    ])
+    ]
     let skill = text.map(el => {
         return <Skill skill={el.skill} id={el.id} about={el.about}/>
     })
