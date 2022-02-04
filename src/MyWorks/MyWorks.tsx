@@ -5,7 +5,7 @@ import {Title} from "../common/components/Title/Title";
 import TDIMG from '../assets/img/Todolist.jpg'
 import Social from '../assets/img/Social.jpg'
 
-export const My_works = () => {
+export const MyWorks = () => {
 
     const work = [
         {id: 1, title: 'Todolist', about: 'project lorem', divStyle: {backgroundImage: `url(${TDIMG})`}},

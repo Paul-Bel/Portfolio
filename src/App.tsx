@@ -3,8 +3,8 @@ import './App.css';
 import {Header} from "./Header/Header";
 import {Main} from "./Main/Main";
 import {Skills} from "./Skills/Skills";
-import {My_works} from "./MyWorks/My_works";
-import {Work_remotely} from "./common/Work_remotely/Work_remotely";
+import {MyWorks} from "./MyWorks/MyWorks";
+import {WorkRemotely} from "./common/Work_remotely/WorkRemotely";
 import {Contacts} from "./Contacts/Contacts";
 import {Footer} from "./common/Footer/Footer";
 
@@ -14,8 +14,8 @@ function App() {
             <Header/>
             <Main/>
             <Skills/>
-            <My_works/>
-            <Work_remotely/>
+            <MyWorks/>
+            <WorkRemotely/>
             <Contacts/>
             <Footer/>
         </div>

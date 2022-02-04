@@ -1,7 +1,7 @@
 import React from "react";
 import s from './Work_remotely.module.css'
 
-export const Work_remotely = () => {
+export const WorkRemotely = () => {
 
 
     return (

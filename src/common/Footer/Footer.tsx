@@ -8,10 +8,10 @@ export const Footer = () => {
         let arr: Array<any> = []
         while (i < a) {
             if (i % 2 === 0) {
-                arr = [...arr, <div className={s.squares}></div>]}
+                arr = [...arr, <div className={s.squares}> </div>]}
             i++
             if (i % 2 === 1) {
-                arr = [...arr, <div className={s.square}></div>]}
+                arr = [...arr, <div className={s.square}> </div>]}
             i++
         }
         return arr
