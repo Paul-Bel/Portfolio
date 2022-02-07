@@ -1,4 +1,4 @@
-import s from './My_works.module.css'
+import s from './My_works.module.scss'
 import stylesContainer from "../common/styles/Container.module.css";
 import {MyWork} from "./MyWork";
 import {Title} from "../common/components/Title/Title";

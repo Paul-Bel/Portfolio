@@ -1,0 +1,26 @@
+@import '/src/common/styles/varabiles.scss';
+.title {
+    margin: 0 0 30px;
+    position: relative;
+    &::before{
+        content: '';
+        background: $secondTextColor;
+        width: 55px;
+        height: 1px;
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    & h2{
+        margin: 0;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        font-size: 36px;
+        color: $textColor;
+        text-transform: capitalize;
+        letter-spacing: 5px;
+        line-height: 1.2;
+    }
+}
+

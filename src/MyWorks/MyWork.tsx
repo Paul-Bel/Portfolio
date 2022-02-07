@@ -1,4 +1,4 @@
-import s from './My_works.module.css'
+import s from './My_works.module.scss'
 
 type WorkPropsType = { title: string, about: string, styleImg: any }
 
