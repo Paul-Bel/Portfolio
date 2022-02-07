@@ -1,91 +1,87 @@
 @import "src/common/styles/varabiles";
+@import "src/common/styles/mixin";
+
 .block {
-    min-height: 100vh;
+  min-height: 100vh;
+  background-color: $bgFirstColor;
+  display: flex;
+  flex-direction: column;
+
+  .header {
     background-color: $bgFirstColor;
-    display: flex;
-    flex-direction: column;
-    .header {
-        background-color: $bgFirstColor;
-        margin: 5%;
-        color: $textColor;
-        .content {
-            margin-top: 50px;
-            width: 100%;
-            min-height: 450px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-items: stretch;
-            height: 100%;
-        }
+    margin: 5%;
+    color: $textColor;
+
+    .content {
+      margin-top: 50px;
+      width: 100%;
+      min-height: 450px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: stretch;
+      height: 100%;
     }
+  }
 }
 .work {
-    display: inline-flex;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 500px;
+  text-align: center;
+  min-height: 600px;
+  margin: 5px;
+  background-color: $bgSecondColor;
+  .img {
+    height: 65%;
+    min-height: 150px;
+    border: 1px solid;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 500px;
-    text-align: center;
-    min-height: 600px;
-    margin: 5px;
-    background-color: $bgSecondColor;
-    .img {
-        height: 65%;
-        min-height: 150px;
-        border: 1px solid;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        position: relative;
-        &::before{
-            position: absolute;
-            content: '';
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background-color: $bgFirstColor;
-            opacity: 0.3;
-        }
-        .button {
-            width: 80px;
-            height: 50px;
-            border-radius: 5px;
-            cursor: pointer;
-            position: relative;
-            z-index: 1;
-            background-color: $secondTextColor;
-            color: $textColor;
-        }
+    justify-content: space-around;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: $bgFirstColor;
+      opacity: 0.3;
     }
-    .about {
-        height: 34%;
-        /*min-height: 250px;*/
-        padding: 25px 20px;
-        .about_works {
-            font-family: 'Poppins', sans-serif;
-            color: $textColor;
-            font-size: inherit;
-            text-indent: inherit;
-            font-weight: 400;
-            font-stretch: normal;
-            line-height: 1.8;
-        }
-        .about h3 {
-            font-family: 'Josefin Sans', sans-serif;
-            margin-bottom: 15px;
-            font-size: 16px;
-            letter-spacing: 1px;
-            color: $textColor;
-        }
-        .span {
-            height: 150px;
-        }
+    .button {
+      width: 80px;
+      height: 50px;
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      background-color: $secondTextColor;
+      color: $textColor;
     }
+  }
+  .about {
+    height: 34%;
+    padding: 25px 20px;
+    .about_works {
+      @include text($fontFamilyPoppins, 400, inherit, 1.8);
+      text-indent: inherit;
+      font-stretch: normal;
+    }
+    .about h3 {
+      @include text($fontFamilyJosefin, 300, 16px, 1px);
+      margin-bottom: 15px;
+    }
+    .span {
+      height: 150px;
+    }
+  }
 }
 
 
