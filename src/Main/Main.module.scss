@@ -1,4 +1,5 @@
 @import "src/common/styles/varabiles";
+@import "src/common/styles/mixin";
 .mainblock {
     min-height: 100vh;
     background-color: $bgFirstColor;
@@ -8,6 +9,11 @@
         background-color: $bgFirstColor;
         .text_about{
             margin: 15px;
+            @include text($fontFamilyJosefin, 700, 16px, 1px);
+        }
+        .text_h1{
+            margin: 15px;
+            @include text($fontFamilyJosefin, 700, 35px, 2px);
         }
     }
     .photo {
