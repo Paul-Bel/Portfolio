@@ -21,7 +21,7 @@ export const Main = () => {
             }
             else setInfo('b')
             if(info === a) {setInfo(''); setCount(() => 0)}
-        }, 150)
+        }, 250)
 
         return () => {
             clearInterval(intervalID)
