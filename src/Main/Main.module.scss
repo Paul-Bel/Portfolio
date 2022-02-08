@@ -1,0 +1,25 @@
+@import "src/common/styles/varabiles";
+.mainblock {
+    min-height: 100vh;
+    background-color: $bgFirstColor;
+    color: $textColor;
+    .about {
+        min-width: 280px;
+        background-color: $bgFirstColor;
+        .text_about{
+            margin: 15px;
+        }
+    }
+    .photo {
+        width: 280px;
+        height: 400px;
+        min-height: 55%;
+        background-color: #bebbbb;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+
+

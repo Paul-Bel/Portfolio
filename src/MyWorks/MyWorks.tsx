@@ -8,9 +8,19 @@ import Social from '../assets/img/Social.jpg'
 export const MyWorks = () => {
 
     const work = [
-        {id: 1, title: 'Todolist', about: 'project lorem', divStyle: {backgroundImage: `url(${TDIMG})`}},
-        {id: 2, title: 'Social Network', about: 'about project lorem about project lorem about project lorem\n' +
-                '    about project lorem about project lorem about project lorem', divStyle: {backgroundImage: `url(${Social})`}},
+        {
+            id: 1,
+            title: 'Todolist',
+            about: 'project lorem',
+            divStyle: {backgroundImage: `url(${TDIMG})`}
+        },
+        {
+            id: 2,
+            title: 'Social Network',
+            about: 'about project lorem about project lorem about project lorem\n' +
+                '    about project lorem about project lorem about project lorem',
+            divStyle: {backgroundImage: `url(${Social})`}
+        },
     ]
 
     const works = work.map(el => {

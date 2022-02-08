@@ -19,7 +19,6 @@
       @include flexFirstStyle(flex, column, nowrap, space-around, flex-start);
       width: 70%;
       min-height: 350px;
-      //align-content: center;
       border: 1px solid;
       padding-left: 7px;
 
@@ -34,7 +33,6 @@
         min-width: 80%;
         min-height: 140px;
         max-height: 180px;
-        //visibility: visible;
         animation-delay: 0.2s;
         animation-name: fadeInUp;
       }
@@ -76,29 +74,6 @@
           width: 100%;
         }
       }
-
-      //& button:hover {
-      //  display: block;
-      //  font: 400 14px/1.2 'Poppins', sans-serif;
-      //  text-transform: uppercase;
-      //  text-decoration: none;
-      //  letter-spacing: 1px;
-      //  padding: 7px 20px;
-      //  cursor: pointer;
-      //  -webkit-transition: all 0.4s ease-in-out 0s;
-      //  -moz-transition: all 0.4s ease-in-out 0s;
-      //  -o-transition: all 0.4s ease-in-out 0s;
-      //  transition: all 0.4s ease-in-out 0s;
-      //  background: transparent;
-      //  color: #fff;
-      //  max-width: 170px;
-      //  margin: 15px auto;
-      //  z-index: 22;
-      //  text-align: center;
-      //  width: 100%;
-      //  border: none;
-      //  position: relative;
-      //}
     }
   }
 }

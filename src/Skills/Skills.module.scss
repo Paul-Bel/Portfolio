@@ -1,0 +1,47 @@
+@import "src/common/styles/varabiles";
+@import "src/common/styles/mixin";
+.skillBlock {
+    min-height: 100vh;
+    background-color: $bgSecondColor;
+    color: $textColor;
+    @include flexFirstStyle(flex, row, wrap, space-around, normal) ;
+    .container {
+        @include flexFirstStyle(flex, column, nowrap, center, center);
+        margin: 5%;
+        min-width: 90%;
+        .skillItem {
+            margin: 0 auto;
+        }
+        .skills {
+            width: 100%;
+            @include flexFirstStyle(flex, row, wrap, space-around, center);
+        }
+    }
+}
+
+.skill {
+    width: 270px;
+    align-items: center;
+    //border: 1px solid;
+    margin: 5px;
+    background-color: $bgFirstColor;
+    .icon {
+        margin: 0 auto;
+        background-color: gray;
+        min-height: 80px;
+        width: 35%;
+        align-items: center;
+        text-align: center;
+    }
+    .about {
+        @include flexFirstStyle(flex, column, wrap, normal, center);
+         .aboutSkill {
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+

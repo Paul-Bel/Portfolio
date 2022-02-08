@@ -1,0 +1,26 @@
+@import 'src/common/styles/varabiles';
+.nav {
+  box-sizing: border-box;
+  background-color: $bgSecondColor;
+  color: $textColor;
+  //border: 1px solid darkred;
+  //width: 300px;
+  //display: flex;
+  //justify-content: space-between;
+  //& overlay {
+  //  box-shadow: 0 0 0 120vw rgb(31 31 32), 0 0 0 120vh rgb(31 31 32);
+  //  opacity: 0.9 /*border-radius: 0;*/;
+  .listMenu {
+    border: 1px solid darkred;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    .menuItem {
+      list-style-type: none;
+    & a {
+      color: $textColor;
+    }
+    }
+  }
+}
+

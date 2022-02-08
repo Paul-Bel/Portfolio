@@ -6,28 +6,21 @@
   background-color: $bgFirstColor;
   display: flex;
   flex-direction: column;
-
   .header {
     background-color: $bgFirstColor;
     margin: 5%;
     color: $textColor;
-
     .content {
+      @include flexFirstStyle(flex, row, wrap, space-around, stretch);
       margin-top: 50px;
       width: 100%;
       min-height: 450px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: stretch;
       height: 100%;
     }
   }
 }
 .work {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include flexFirstStyle(inline-flex, column, nowrap, space-between, normal);
   width: 500px;
   text-align: center;
   min-height: 600px;
@@ -37,10 +30,7 @@
     height: 65%;
     min-height: 150px;
     border: 1px solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    @include flexFirstStyle(flex, column, nowrap, space-around, center);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -74,7 +64,6 @@
       @include text($fontFamilyPoppins, 300, inherit, 1.8);
       text-indent: inherit;
       font-stretch: normal;
-
     }
     & h3 {
       @include text($fontFamilyJosefin, 700, 16px, 1px);
