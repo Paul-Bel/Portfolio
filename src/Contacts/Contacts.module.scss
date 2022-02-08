@@ -1,34 +1,94 @@
 @import "src/common/styles/varabiles";
+@import "src/common/styles/mixin";
+
 .block {
-    background-color: #aecfe3;
-    padding: 10% 0;
-    border: 1px solid;
-    .blockContact {
-        min-height: 80vh;
-        width: 80%;
-        border: 1px solid black;
-        margin: 0 auto;
-        display: flex;
-        align-content: space-around;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .input {
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 70%;
-            height: 40%;
-            min-height: 350px;
-            justify-content: space-around;
-            align-content: center;
-            border: 1px solid;
-            padding-left: 7px;
-            & input, textarea, button {
-                min-width: 50%;
-            }
+  background-color: $bgFirstColor;
+  padding: 10% 0;
+  border: 1px solid;
+
+  .blockContact {
+    animation-duration: 1.25s;
+    min-height: 80vh;
+    width: 80%;
+    border: 1px solid $textColor;
+    margin: 0 auto;
+    @include flexFirstStyle(flex, column, wrap, center, center);
+    //align-content: space-around;
+    .input {
+      @include flexFirstStyle(flex, column, nowrap, space-around, flex-start);
+      width: 70%;
+      height: 40%;
+      min-height: 350px;
+      //align-content: center;
+      border: 1px solid;
+      padding-left: 7px;
+
+      & input, textarea, button {
+        min-width: 50%;
+      }
+
+      & button {
+        color: $textColor;
+        font-family: $fontFamilyPoppins;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1px;
+        padding: 7px 20px;
+        transition: all 0.4s ease-in-out 0s;
+        background: transparent;
+        max-width: 170px;
+        margin: 15px auto;
+        z-index: 22;
+        text-align: center;
+        width: 100%;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 10px;
+          width: 50%;
+          background: #4e93e6;
+          z-index: -1;
+          transition: all 0.2s ease-in-out 0s;
+          margin: 0 auto;
         }
+        &:hover:after {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      //& button:hover {
+      //  display: block;
+      //  font: 400 14px/1.2 'Poppins', sans-serif;
+      //  text-transform: uppercase;
+      //  text-decoration: none;
+      //  letter-spacing: 1px;
+      //  padding: 7px 20px;
+      //  cursor: pointer;
+      //  -webkit-transition: all 0.4s ease-in-out 0s;
+      //  -moz-transition: all 0.4s ease-in-out 0s;
+      //  -o-transition: all 0.4s ease-in-out 0s;
+      //  transition: all 0.4s ease-in-out 0s;
+      //  background: transparent;
+      //  color: #fff;
+      //  max-width: 170px;
+      //  margin: 15px auto;
+      //  z-index: 22;
+      //  text-align: center;
+      //  width: 100%;
+      //  border: none;
+      //  position: relative;
+      //}
     }
+
+    & h3 {
+      @include text($fontFamilyPoppins, 700, inherit, 1.8);
+    }
+  }
 }

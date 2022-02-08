@@ -1,5 +1,5 @@
 import s from './My_works.module.scss'
-import stylesContainer from "../common/styles/Container.module.css";
+import stylesContainer from "../common/styles/Container.module.scss";
 import {MyWork} from "./MyWork";
 import {Title} from "../common/components/Title/Title";
 import TDIMG from '../assets/img/Todolist.jpg'

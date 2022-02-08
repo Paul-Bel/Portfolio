@@ -7,3 +7,10 @@
   line-height: $lineHeight;
   color: $textColor;
 }
+@mixin flexFirstStyle($display, $flexDirection, $flexWrap, $justifyContent, $alignItems){
+  display: $display;
+  flex-direction: $flexDirection;
+  flex-wrap: $flexWrap;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}

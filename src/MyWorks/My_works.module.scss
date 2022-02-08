@@ -70,12 +70,12 @@
     height: 34%;
     padding: 25px 20px;
     .about_works {
-      @include text($fontFamilyPoppins, 400, inherit, 1.8);
+      @include text($fontFamilyPoppins, 300, inherit, 1.8);
       text-indent: inherit;
       font-stretch: normal;
     }
-    .about h3 {
-      @include text($fontFamilyJosefin, 300, 16px, 1px);
+    & h3 {
+      @include text($fontFamilyJosefin, 700, 16px, 1px);
       margin-bottom: 15px;
     }
     .span {
