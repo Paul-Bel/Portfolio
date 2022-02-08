@@ -8,7 +8,7 @@ import {Header} from "../Header/Header";
 export const Main = () => {
     const photoPortfolio = {backgroundImage: `url(${foto})`}
     const fotoStartPage = {backgroundImage: `url(${BackIMG})`}
-    const [info, setInfo] = useState<string>('')
+    const [info, setInfo] = useState<string>('_')
     const [count, setCount] = useState<number>(0)
 
     useEffect(() => {
