@@ -2,59 +2,80 @@
 @import "src/common/styles/mixin";
 
 .mainblock {
-    min-height: 100vh;
-    background-color: $bgFirstColor;
-    color: $textColor;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  min-height: 100vh;
+  background-color: $bgFirstColor;
+  color: $textColor;
+  background-size: cover;
+  background-position: center;
+  //background-repeat: repeat;
 
-    .about {
-        margin-top: 120px;
-        min-width: 400px;
-        //background-color: $bgFirstColor;
-        .text_about{
-            margin: 15px;
-            @include text($fontFamilyJosefin, 700, 16px, 1px);
-        }
-        .text_aboutSecond{
-            margin: 15px 15px 25px 0;
-            @include text($fontFamilyJosefin, 700, 16px, 1px);
-        }
-        .text_h1{
-            margin-bottom: 25px;
-            @include text($fontFamilyJosefin, 400, 30px, 2px);
-        }
-        .name {
-            @include text($fontFamilyJosefin, 700, 35px, 2px);
-            position: relative;
-            z-index: 0;
-            //display: inline-block;
-            &::after{
-                content: "";
-                position: absolute;
-                left: 15px;
-                right: 10px;
-                bottom: 3px;
-                height: 8px;
-                width: 100%;
-                z-index: -1;
-                background-color: $secondTextColor;
-                //opacity: 0.3;
-            }
-        }
+  .about {
+    margin-top: 120px;
+    min-width: 400px;
+    //background-color: $bgFirstColor;
+
+
+  }
+
+  .text_about {
+    margin: 15px;
+    @include text($fontFamilyJosefin, 700, 16px, 1px);
+    @media screen and(max-width: 440px) {
+      margin: 25px 35px;
+      @include text($fontFamilyJosefin, 300, 12px, 1px);
     }
-    .photo {
-        margin-top: 20px;
-        width: 280px;
-        height: 400px;
-        min-height: 55%;
-        background-color: #bebbbb;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+  }
+
+  .text_aboutSecond {
+    margin: 15px 15px 25px 0;
+    @include text($fontFamilyJosefin, 700, 16px, 1px);
+    @media screen and(max-width: 440px) {
+      margin: 15px 25px;
+      @include text($fontFamilyJosefin, 300, 12px, 1px);
     }
+
+  }
+
+  .text_h1 {
+    margin-bottom: 25px;
+    @include text($fontFamilyJosefin, 400, 30px, 2px);
+    @media screen and(max-width: 440px) {
+      margin: 10px 25px;
+      @include text($fontFamilyJosefin, 400, 18px, 2px);
+    }
+  }
+
+  .name {
+    @include text($fontFamilyJosefin, 700, 35px, 2px);
+    position: relative;
+    z-index: 0;
+    @media screen and(max-width: 440px) {
+      @include text($fontFamilyJosefin, 700, 23px, 2px);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 15px;
+      right: 10px;
+      bottom: 3px;
+      height: 8px;
+      width: 100%;
+      z-index: -1;
+      background-color: $secondTextColor;
+      //opacity: 0.3;
+    }
+  }
 }
 
+.photo {
+  margin-top: 20px;
+  width: 280px;
+  height: 400px;
+  min-height: 55%;
+  background-color: #bebbbb;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 
