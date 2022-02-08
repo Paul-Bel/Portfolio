@@ -20,7 +20,7 @@ export const Main = () => {
                 setCount(prevState => prevState + 1)
             }
             else setInfo('b')
-            if(info === a) {setInfo(''); setCount(() => 0)}
+            if(info === a) {setInfo('_'); setCount(() => 0)}
         }, 250)
 
         return () => {
