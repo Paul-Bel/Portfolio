@@ -21,16 +21,17 @@
       //min-height: 350px;
       border: 1px solid;
       padding-left: 7px;
-
       & input {
         margin: 6px 30px 6px 5px;
         height: 24px;
         width: 80%;
         background-color: #252527;
         border: 1px solid #4a4a4a;
+        color: $textColor;
       }
 
       & textarea {
+        color: $textColor;
         margin: 0 30px 6px 5px;
         max-width: 80%;
         min-width: 80%;
