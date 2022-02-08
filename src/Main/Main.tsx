@@ -8,7 +8,7 @@ import {Header} from "../Header/Header";
 export const Main = () => {
     const photoPortfolio = {backgroundImage: `url(${foto})`}
     const fotoStartPage = {backgroundImage: `url(${BackIMG})`}
-    const [info, setInfo] = useState<string>('_')
+    const [info, setInfo] = useState<string>('')
     const [count, setCount] = useState<number>(0)
 
     useEffect(() => {
@@ -16,11 +16,11 @@ export const Main = () => {
 
             let a = "frontend developer ()=>({ JS, React, Redux })   "
             if (info !== a) {
-                setInfo(prevState => prevState.concat(a[count]));
-                setCount(prevState => prevState + 1)
+                setInfo(info.concat(a[count]));
+                setCount(count+1)
             }
             else setInfo('b')
-            if(info === a) {setInfo('_'); setCount(() => 0)}
+            if(info === a) {setInfo(''); setCount(() => 0)}
         }, 250)
 
         return () => {
