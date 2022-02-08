@@ -14,7 +14,7 @@ export const Main = () => {
     useEffect(() => {
         let intervalID = setInterval(() => {
 
-            let a = "frontend developer ()=>({ JS, React, Redux })"
+            let a = "frontend developer ()=>({ JS, React, Redux })   "
             if (info !== a) {
                 setInfo(prevState => prevState.concat(a[count]));
                 setCount(prevState => prevState + 1)
