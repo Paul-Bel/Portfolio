@@ -28,7 +28,7 @@ export const MyWorks = () => {
     })
 
     return (
-        <div className={s.block}>
+        <div className={s.block} id={'3'}>
             <div className={`${stylesContainer.containerMain} ${s.header}`}>
                 <Title title={"My Works"}/>
                 {/*<div className={s.title}>*/}

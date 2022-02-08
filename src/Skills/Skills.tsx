@@ -18,7 +18,7 @@ export const Skills = () => {
         return <Skill skill={el.skill} id={el.id} about={el.about}/>
     })
     return (
-        <div className={s.skillBlock}>
+        <div className={s.skillBlock} id={'2'} >
             <div className={`${stylesContainer.containerMain} ${s.container}`}>
                 <div className={s.skillItem}>
                 <Title title={'Skils'}/>

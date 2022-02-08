@@ -6,7 +6,7 @@ export const Header = () => {
 
 
     return (
-        <div className={s.header}>
+        <div className={s.header} id={'1'}>
 <NavBar/>
         </div>
     )

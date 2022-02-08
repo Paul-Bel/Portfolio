@@ -7,7 +7,7 @@ export const Main = () => {
 const fotoPortfolio = {backgroundImage: `url(${foroPortfolio})`}
 
     return (
-        <div className={s.mainblock}>
+        <div className={s.mainblock} id={'1'}>
             <div className={stylesContainer.containerMain}>
                 <div className={s.about}>
                     <span className={s.text_about}>Hi There</span>
