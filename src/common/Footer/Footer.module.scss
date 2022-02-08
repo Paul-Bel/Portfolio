@@ -1,0 +1,37 @@
+@import "src/common/styles/varabiles";
+@import "src/common/styles/mixin";
+
+.footer {
+  height: 100px;
+  background-color: $bgSecondColor;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  color: $textColor;
+  & h3 {
+    @include text($fontFamilyJosefin, 700, 16px, 1px);
+  }
+  & span {
+    @include text($fontFamilyJosefin, 300, 14px, 1px);
+  }
+  .containerSqu {
+    display: flex;
+    justify-content: center;
+
+    .squares {
+      width: 30px;
+      height: 30px;
+      background-color: #bebbbb;
+    }
+
+    .square {
+      width: 30px;
+      height: 30px;
+      background-color: gray;
+    }
+  }
+}
+
+

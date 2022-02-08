@@ -32,7 +32,7 @@
   text-align: center;
   min-height: 600px;
   margin: 5px;
-  background-color: $bgSecondColor;
+
   .img {
     height: 65%;
     min-height: 150px;
@@ -69,10 +69,12 @@
   .about {
     height: 34%;
     padding: 25px 20px;
+    background-color: $bgSecondColor;
     .about_works {
       @include text($fontFamilyPoppins, 300, inherit, 1.8);
       text-indent: inherit;
       font-stretch: normal;
+
     }
     & h3 {
       @include text($fontFamilyJosefin, 700, 16px, 1px);
