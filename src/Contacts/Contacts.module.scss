@@ -5,7 +5,7 @@
   background-color: $bgFirstColor;
   padding: 10% 0;
   border: 1px solid;
-  max-height: 60vh;
+  max-height: 70vh;
 
   .blockContact {
     animation-duration: 1.25s;
@@ -18,22 +18,27 @@
     .input {
       @include flexFirstStyle(flex, column, nowrap, space-around, flex-start);
       width: 70%;
-      min-height: 350px;
+      //min-height: 350px;
       border: 1px solid;
       padding-left: 7px;
 
-      & input, textarea {
+      & input {
+        margin: 6px 30px 6px 5px;
+        height: 24px;
         width: 80%;
         background-color: #252527;
         border: 1px solid #4a4a4a;
       }
 
       & textarea {
+        margin: 0 30px 6px 5px;
         max-width: 80%;
         min-width: 80%;
-        min-height: 140px;
-        max-height: 180px;
-        animation-delay: 0.2s;
+        min-height: 220px;
+        max-height: 263px;
+        background-color: #252527;
+        border: 1px solid #4a4a4a;
+        animation-delay: 0.9s;
         animation-name: fadeInUp;
       }
 

@@ -19,7 +19,7 @@ export const Footer = () => {
     return (
         <div className={s.footer}>
             <div>
-                <h3>Pavel Beloborodov</h3>
+                <h3>Paul Beloborodov</h3>
                 <div className={s.containerSqu}>
                     {squares(7)}
                 </div>

@@ -7,10 +7,10 @@ export const NavBar = () => {
     return (
         <div className={s.nav}>
             <ul className={s.listMenu}>
-                <li className={s.menuItem} ><a href="#1">Главная</a></li>
-                <li className={s.menuItem}><a href="#2">Скилы</a></li>
-                <li className={s.menuItem}><a href="#3">Проекты</a></li>
-                <li className={s.menuItem}><a href="#4">Контакты</a></li>
+                <li className={s.menuItem} ><a href="#1">Home</a></li>
+                <li className={s.menuItem}><a href="#2">Skills</a></li>
+                <li className={s.menuItem}><a href="#3">Projects</a></li>
+                <li className={s.menuItem}><a href="#4">Contacts</a></li>
             </ul>
 
 
