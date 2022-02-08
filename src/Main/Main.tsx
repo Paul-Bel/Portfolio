@@ -11,7 +11,10 @@ const fotoPortfolio = {backgroundImage: `url(${foroPortfolio})`}
             <div className={stylesContainer.containerMain}>
                 <div className={s.about}>
                     <span className={s.text_about}>Hi There</span>
-                    <h1 className={s.text_h1}>I am <p/> Paul Beloborodov</h1>
+                    <h1 className={s.text_h1}>I am
+                        <span className={s.name}> Paul Beloborodov </span>
+                    </h1>
+                    <p/>
                     <span className={s.text_about}>frontend Developer</span>
                 </div>
                 <div className={s.photo} style={fotoPortfolio}> </div>

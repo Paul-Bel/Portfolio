@@ -12,8 +12,26 @@
             @include text($fontFamilyJosefin, 700, 16px, 1px);
         }
         .text_h1{
-            margin: 15px;
+            margin-bottom: 25px;
+            @include text($fontFamilyJosefin, 400, 30px, 2px);
+        }
+        .name {
             @include text($fontFamilyJosefin, 700, 35px, 2px);
+            position: relative;
+            z-index: 0;
+            //display: inline-block;
+            &::after{
+                content: "";
+                position: absolute;
+                left: 18px;
+                right: 0;
+                bottom: 0;
+                height: 20px;
+                width: 100%;
+                z-index: -1;
+                background-color: $secondTextColor;
+                //opacity: 0.3;
+            }
         }
     }
     .photo {
