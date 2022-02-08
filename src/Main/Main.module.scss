@@ -4,11 +4,16 @@
     min-height: 100vh;
     background-color: $bgFirstColor;
     color: $textColor;
+
     .about {
         min-width: 280px;
         background-color: $bgFirstColor;
         .text_about{
             margin: 15px;
+            @include text($fontFamilyJosefin, 700, 16px, 1px);
+        }
+        .text_aboutSecond{
+            margin: 15px 15px 25px 30px;
             @include text($fontFamilyJosefin, 700, 16px, 1px);
         }
         .text_h1{
@@ -35,6 +40,7 @@
         }
     }
     .photo {
+        margin-top: 20px;
         width: 280px;
         height: 400px;
         min-height: 55%;
