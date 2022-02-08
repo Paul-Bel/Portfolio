@@ -11,10 +11,10 @@
   padding: 0;
   color: $textColor;
   & h3 {
-    @include text($fontFamilyJosefin, 700, 16px, 1px);
+    @include text($fontFamilyJosefin, 500, 12px, 1px);
   }
   & span {
-    @include text($fontFamilyJosefin, 300, 14px, 1px);
+    @include text($fontFamilyJosefin, 500, 12px, 1px);
   }
   .containerSqu {
     display: flex;

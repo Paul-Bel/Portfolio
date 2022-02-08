@@ -1,32 +1,36 @@
 import React, {useEffect, useState} from "react";
 import s from './Main.module.scss'
 import stylesContainer from '../common/styles/Container.module.scss'
-import foroPortfolio from '../assets/img/myFoto.jpg'
+import foto from '../assets/img/myFoto.jpg'
+import BackIMG from '../assets/img/Portfolio_startPage.gif'
+import {Header} from "../Header/Header";
 
 export const Main = () => {
-    const fotoPortfolio = {backgroundImage: `url(${foroPortfolio})`}
+    const photoPortfolio = {backgroundImage: `url(${foto})`}
+    const fotoStartPage = {backgroundImage: `url(${BackIMG})`}
     const [info, setInfo] = useState<string>('')
     const [count, setCount] = useState<number>(0)
 
-    let c = 0
-    let b = ''
     useEffect(() => {
         let intervalID = setInterval(() => {
 
-            let a = "frontend developer..."
+            let a = "frontend developer ()=>({ JS, React, Redux })"
             if (info !== a) {
                 setInfo(prevState => prevState.concat(a[count]));
                 setCount(prevState => prevState + 1)
             }
-            else setInfo(b)
-            if(info === a) {setInfo(''); setCount(prevState => 0)}
-        }, 300)
+            else setInfo('b')
+            if(info === a) {setInfo(''); setCount(() => 0)}
+        }, 150)
 
-        return () => clearInterval(intervalID)
+        return () => {
+            clearInterval(intervalID)
+        }
     }, [info, count])
 
     return (
-        <div className={s.mainblock} id={'1'}>
+        <div className={s.mainblock} id={'1'} style={fotoStartPage}>
+            <Header/>
             <div className={stylesContainer.containerMain}>
                 <div className={s.about}>
                     <span className={s.text_about}>Hi There</span>
@@ -36,10 +40,10 @@ export const Main = () => {
                     <p/>
                     <span className={s.text_aboutSecond}>
                         {/*frontend developer*/}
-                        {info}
+                        {info}_
                     </span>
                 </div>
-                <div className={s.photo} style={fotoPortfolio}></div>
+                <div className={s.photo} style={photoPortfolio}> </div>
             </div>
         </div>
     )
