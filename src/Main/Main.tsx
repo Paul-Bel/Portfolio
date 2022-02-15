@@ -6,7 +6,7 @@ import BackIMG from '../assets/img/Portfolio_startPage.gif'
 import {Header} from "../Header/Header";
 
 export const Main = () => {
-    const photoPortfolio = {backgroundImage: `url(${foto})`}
+    // const photoPortfolio = {backgroundImage: `url(${foto})`, zIndex: '1'}
     const fotoStartPage = {backgroundImage: `url(${BackIMG})`}
     const [info, setInfo] = useState<string>('')
     const [count, setCount] = useState<number>(0)
@@ -17,10 +17,12 @@ export const Main = () => {
             let a = "frontend developer ()=>({ JS, React, Redux })   "
             if (info !== a) {
                 setInfo(info.concat(a[count]));
-                setCount(count+1)
+                setCount(count + 1)
+            } else setInfo('b')
+            if (info === a) {
+                setInfo('');
+                setCount(() => 0)
             }
-            else setInfo('b')
-            if(info === a) {setInfo(''); setCount(() => 0)}
         }, 250)
 
         return () => {
@@ -29,7 +31,7 @@ export const Main = () => {
     }, [info, count])
 
     return (
-        <div className={s.mainblock} id={'1'} style={fotoStartPage}>
+        <div className={s.mainblock} id={'1'}>
             <Header/>
             <div className={stylesContainer.containerMain}>
                 <div className={s.about}>
@@ -43,7 +45,9 @@ export const Main = () => {
                         {info}_
                     </span>
                 </div>
-                <div className={s.photo} style={photoPortfolio}> </div>
+                <div className={s.photo}>
+                <div className={s.img}> </div>
+                </div>
             </div>
         </div>
     )

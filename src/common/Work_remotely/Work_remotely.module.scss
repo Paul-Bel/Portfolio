@@ -8,53 +8,11 @@
     .container {
         width: 80%;
         margin: 5% auto;
-        //border: 1px solid;
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        .click {
-            & button {
-                color: $textColor;
-                font-family: $fontFamilyPoppins;
-                text-transform: uppercase;
-                text-decoration: none;
-                letter-spacing: 1px;
-                padding: 7px 20px;
-                transition: all 0.4s ease-in-out 0s;
-                background: transparent;
-                max-width: 100px;
-                margin: 15px auto;
-                z-index: 22;
-                text-align: center;
-                width: 100%;
-                border: none;
-                position: relative;
-                cursor: pointer;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    height: 8px;
-                    width: 80%;
-                    background: #4e93e6;
-                    z-index: -1;
-                    transition: all 0.2s ease-in-out 0s;
-                    margin: -5px auto;
-                }
-
-                &:hover:after {
-                    height: 130%;
-                    width: 100%;
-                }
-            }
         }
-    }
-    .title {
-    }
 }
 
 

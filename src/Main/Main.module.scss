@@ -2,22 +2,94 @@
 @import "src/common/styles/mixin";
 
 .mainblock {
+  background-image: url("./../assets/img/Portfolio_startPage.gif");
   min-height: 100vh;
   background-color: $bgFirstColor;
   color: $textColor;
   background-size: cover;
-  background-position: center;
-  //background-repeat: repeat;
+  background-repeat: repeat;
+  transition: 0.5s;
+  &:hover .photo {
+    width: 300px;
+    height: 420px;
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+    transition: 1s;
+    .img {
+      transition: 1s;
+      margin-top: 22px;
+      width: 280px;
+      height: 400px;
+      min-height: 55%;
+      background-size: cover;
+      background-image: url("./../assets/img/myFoto.jpg");
+      background-position: 80% 0;
 
+      &:before {
+        content: "";
+        position: absolute;
+        right: -20px;
+        top: -1px;
+        width: 290px;
+        height: 430px;
+        border: 5px solid $secondTextColor;
+        z-index: -1;
+      }
+    }
+  }
   .about {
     margin-top: 120px;
     min-width: 400px;
     //background-color: $bgFirstColor;
+  }
+  .photo {
+    width: 300px;
+    height: 420px;
+    position: relative;
+    z-index: 1;
+    transition: 1s;
+    .img {
+      margin-top: 20px;
+      width: 280px;
+      height: 400px;
+      min-height: 55%;
+      background-size: cover;
+      background-image: url("./../assets/img/myFoto.jpg");
+      background-position: 80% 0;
+      &:before {
+        content: "";
+        position: absolute;
+        right: -20px;
+        top: -1px;
+        width: 290px;
+        height: 430px;
+        border: 5px solid $secondTextColor;
+        z-index: -1;
+      }
+    }
+    &:hover {
+      margin-top: 20px;
+      width: 280px;
+      height: 400px;
+      min-height: 55%;
+      transition: 1s;
+      position: relative;
+      z-index: 1;
 
-
+      .img {
+        transition: 1s;
+        margin-top: 20px;
+        width: 290px;
+        height: 410px;
+        min-height: 55%;
+        background-image: url("./../assets/img/myFoto.jpg");
+      }
+    }
   }
 
   .text_about {
+    transition: 1s;
     margin: 15px;
     @include text($fontFamilyJosefin, 700, 16px, 1px);
     @media screen and(max-width: 440px) {
@@ -52,6 +124,7 @@
     @media screen and(max-width: 440px) {
       @include text($fontFamilyJosefin, 700, 23px, 2px);
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -66,16 +139,4 @@
     }
   }
 }
-
-.photo {
-  margin-top: 20px;
-  width: 280px;
-  height: 400px;
-  min-height: 55%;
-  background-color: $textColor;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 

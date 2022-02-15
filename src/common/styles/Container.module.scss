@@ -1,8 +1,9 @@
 .containerMain {
-    min-height: 90vh;
+    transition: 1s;
+    min-height: 80vh;
     //border: 1px solid black;
     margin: 0 auto;
-
+    background-repeat: round;
     display: flex;
     align-content: center;
     flex-wrap: wrap;
