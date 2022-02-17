@@ -3,7 +3,7 @@ import s from './Skills.module.scss'
 import {Skill} from "./Skill";
 import stylesContainer from "../common/styles/Container.module.scss";
 import {Title} from "../common/components/Title/Title";
-import react from "../assets/img/React.png";
+import react from "../assets/img/React.svg";
 import TS from "../assets/img/TS.png";
 import HTML from "../assets/img/HTML.jpg";
 import Redux from "../assets/img/Redux.svg";
