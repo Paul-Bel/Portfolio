@@ -6,29 +6,41 @@ import BackIMG from '../assets/img/Portfolio_startPage.gif'
 import {Header} from "../Header/Header";
 
 export const Main = () => {
-    // const photoPortfolio = {backgroundImage: `url(${foto})`, zIndex: '1'}
-    const fotoStartPage = {backgroundImage: `url(${BackIMG})`}
     const [info, setInfo] = useState<string>('')
+    const [refresh, setRefresh] = useState<string>('')
     const [count, setCount] = useState<number>(0)
+    const [change, setChange] = useState(true)
 
     useEffect(() => {
         let intervalID = setInterval(() => {
-
-            let a = "frontend developer ()=>({ JS, React, Redux })   "
-            if (info !== a) {
-                setInfo(info.concat(a[count]));
-                setCount(count + 1)
-            } else setInfo('b')
-            if (info === a) {
-                setInfo('');
-                setCount(() => 0)
+            let a = "frontend developer ()=>({ TS, JS, React, Redux })          "
+                if(change) {
+                    if (info !== a) {
+                        setInfo(info.concat(a[count]));
+                        setCount(count + 1)
+                    }
+                    if (info.length === a.length) {
+                        setRefresh(a)
+                        setChange(false)
+                    }
+                }
+                    if(!change) {
+                    if (refresh.length !== 0) {
+                        setRefresh(refresh.substring(0, (refresh.length-1)));
+                        setCount(count - 1)
+                    }
+                    if (refresh.length === 0) {
+                        setInfo('')
+                        setChange(true)
+                    }
             }
-        }, 250)
+
+        }, 100)
 
         return () => {
             clearInterval(intervalID)
         }
-    }, [info, count])
+    }, [info, count, refresh, change])
 
     return (
         <div className={s.mainblock} id={'1'}>
@@ -42,7 +54,7 @@ export const Main = () => {
                     <p/>
                     <span className={s.text_aboutSecond}>
                         {/*frontend developer*/}
-                        {info}_
+                        {change ? info : refresh}_
                     </span>
                 </div>
                 <div className={s.photo}>
