@@ -1,7 +1,6 @@
 @import "src/common/styles/varabiles";
 @import "src/common/styles/mixin";
 .skillBlock {
-
     min-height: 100vh;
     background-color: $bgSecondColor;
     color: $textColor;
@@ -9,8 +8,8 @@
     .container {
         @include flexFirstStyle(flex, column, nowrap, center, center);
         margin-top: 50px;
-        //margin: 5%;
         min-width: 90%;
+
         .skillItem {
             margin: 0 auto;
         }
@@ -18,6 +17,9 @@
             width: 100%;
             margin-top: 50px;
             @include flexFirstStyle(flex, row, wrap, space-around, center);
+            @media screen and(max-width: 440px){
+                @include flexFirstStyle(flex, column, wrap, space-around, center);
+            }
         }
     }
 }
