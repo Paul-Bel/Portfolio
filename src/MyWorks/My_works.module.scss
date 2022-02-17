@@ -20,12 +20,10 @@
   }
 }
 .work {
-  @include flexFirstStyle(inline-flex, column, nowrap, space-between, normal);
-  width: 500px;
+  @include flexFirstStyle(inline-flex, column, nowrap, flex-start, normal);
+  width: 350px;
   text-align: center;
-  min-height: 600px;
   margin: 5px;
-
   .img {
     height: 65%;
     min-height: 150px;
@@ -47,7 +45,7 @@
     }
     .button {
       width: 80px;
-      height: 50px;
+      //height: 50px;
       border-radius: 5px;
       cursor: pointer;
       position: relative;
@@ -57,8 +55,8 @@
     }
   }
   .about {
-    height: 34%;
-    padding: 25px 20px;
+    //height: 34%;
+    //padding: 25px 20px;
     background-color: $bgSecondColor;
     .about_works {
       @include text($fontFamilyPoppins, 300, inherit, 1.8);

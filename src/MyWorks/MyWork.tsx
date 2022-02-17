@@ -11,7 +11,7 @@ export const MyWork = (props: WorkPropsType) => {
                 {/*<button >*/}
                     <a href={props.project}
 
-                       // target={'_blank'}
+                       target={'_blank'}
 
                        className={s.button}>looks</a>
                 {/*</button>*/}
