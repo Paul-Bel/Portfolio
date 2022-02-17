@@ -20,7 +20,7 @@ export const MyWorks = () => {
             title: 'Todolist',
             about: 'project lorem',
             divStyle: {backgroundImage: `url(${TDIMG})`},
-            project: 'paul-bel.github.io/TodoListForLearning/,'
+            project: 'https://paul-bel.github.io/TodoListForLearning/'
         },
         {
             id: 2,
