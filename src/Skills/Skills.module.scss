@@ -1,52 +1,70 @@
 @import "src/common/styles/varabiles";
 @import "src/common/styles/mixin";
 .skillBlock {
+
     min-height: 100vh;
     background-color: $bgSecondColor;
     color: $textColor;
     @include flexFirstStyle(flex, row, wrap, space-around, normal) ;
     .container {
         @include flexFirstStyle(flex, column, nowrap, center, center);
-        margin: 5%;
+        margin-top: 50px;
+        //margin: 5%;
         min-width: 90%;
         .skillItem {
             margin: 0 auto;
         }
         .skills {
             width: 100%;
+            margin-top: 50px;
             @include flexFirstStyle(flex, row, wrap, space-around, center);
         }
     }
 }
 
-.skill {
-    width: 270px;
-    min-height: 295px;
-    align-items: center;
-    //border: 1px solid;
-    margin: 5px;
-    background-color: $bgFirstColor;
-    .icon {
-        margin: 0 auto;
-        background-color: gray;
-        min-height: 170px;
-        width: 170px;
-        align-items: center;
-        text-align: center;
-        background-size: cover;
-        transform: rotate(45deg);
-
-    }
-    .about {
-        @include flexFirstStyle(flex, column, wrap, normal, center);
-         .aboutSkill {
+.skill{
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    .icon{
+        visibility: visible;
+        animation-delay: 0.2s;
+        animation-name: fadeInUp;
+        .iconBox{
+            color: #4e93e6;
+            height: 80px;
+            width: 80px;
+            margin: 0px auto 30px;
+            background: rgba(255,255,255,0.1);
+            display: block;
+            line-height: 80px;
+            font-size: 30px;
+            /* box-shadow: -6px 10px 40px rgb(0 0 0 / 6%); */
             text-align: center;
+            transform: rotate(45deg);
+            transform-origin: center;
+            .img{
+                transform: rotate(315deg);
+                background-size: cover;
+                background-position: center;
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
         }
-
+        .aboutSkill{
+            padding-top: 30px;
+            text-align: center;
+            & h3 {
+                margin: 0 0 15px;
+                /* padding: 0; */
+                font-size: 16px;
+            }
+            .inconeDesc {
+                box-sizing: border-box;
+            }
+        }
     }
 }
-
-
 
 
 
