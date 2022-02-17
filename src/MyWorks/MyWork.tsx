@@ -1,20 +1,25 @@
 import s from './My_works.module.scss'
 
-type WorkPropsType = { title: string, about: string, styleImg: any, project: string }
+
+
+type WorkPropsType = { title: string, about: string, styleImg: {backgroundImage: string}, project: string, img: string }
 
 export const MyWork = (props: WorkPropsType) => {
     console.log(props.project)
     return (
         <div className={s.work}>
-            <div className={s.img} style={props.styleImg}>
-                {/*<a href={''}>click</a>*/}
-                {/*<button >*/}
-                    <a href={props.project}
+            <div className={s.img}
+                 // onClick={href={}}
+                 // style={props.styleImg}
+            >
+                <img src={props.img}
+                     className={s.project}
+                     alt=""/>
+                <a href={props.project}
+                   target={'_blank'}
+                   // className={s.button}
 
-                       target={'_blank'}
-
-                       className={s.button}>looks</a>
-                {/*</button>*/}
+                >looks</a>
             </div>
             <div className={s.about}>
                 <h3>{props.title}</h3>
