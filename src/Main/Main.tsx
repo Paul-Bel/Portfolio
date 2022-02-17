@@ -1,36 +1,32 @@
 import React, {useEffect, useState} from "react";
 import s from './Main.module.scss'
 import stylesContainer from '../common/styles/Container.module.scss'
-import foto from '../assets/img/myFoto.jpg'
-import BackIMG from '../assets/img/Portfolio_startPage.gif'
 import {Header} from "../Header/Header";
 
 export const Main = () => {
     const [info, setInfo] = useState<string>('')
-    const [refresh, setRefresh] = useState<string>('')
+    // const [refresh, setRefresh] = useState<string>('')
     const [count, setCount] = useState<number>(0)
     const [change, setChange] = useState(true)
 
     useEffect(() => {
         let intervalID = setInterval(() => {
-            let a = "frontend developer ()=>({ TS, JS, React, Redux })          "
+            let a = "front-end developer ()=>({ TS, JS, React, Redux })          "
                 if(change) {
                     if (info !== a) {
                         setInfo(info.concat(a[count]));
                         setCount(count + 1)
                     }
                     if (info.length === a.length) {
-                        setRefresh(a)
                         setChange(false)
                     }
                 }
                     if(!change) {
-                    if (refresh.length !== 0) {
-                        setRefresh(refresh.substring(0, (refresh.length-1)));
+                    if (info.length !== 0) {
+                        setInfo(info.substring(0, (info.length-1)));
                         setCount(count - 1)
                     }
-                    if (refresh.length === 0) {
-                        setInfo('')
+                    if (info.length === 0) {
                         setChange(true)
                     }
             }
@@ -40,7 +36,7 @@ export const Main = () => {
         return () => {
             clearInterval(intervalID)
         }
-    }, [info, count, refresh, change])
+    }, [info, count, change])
 
     return (
         <div className={s.mainblock} id={'1'}>
@@ -53,8 +49,7 @@ export const Main = () => {
                     </h1>
                     <p/>
                     <span className={s.text_aboutSecond}>
-                        {/*frontend developer*/}
-                        {change ? info : refresh}_
+                        {info}_
                     </span>
                 </div>
                 <div className={s.photo}>
