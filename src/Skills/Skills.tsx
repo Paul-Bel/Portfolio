@@ -17,12 +17,12 @@ export const Skills = () => {
     const text = [
         {id: 1, skill: "React", about: "Lorem ipsum quis.", style: {backgroundImage: `url(${react})`},},
         {id: 2, skill: "Redux", about: "Lorem ipsum quis.", style: {backgroundImage: `url(${Redux})`},},
-        {id: 3, skill: "TypeScript", about: "Lorem quis.", style: {backgroundImage: `url(${JS})`},},
-        {id: 3, skill: "JS", about: "Lorem quis.", style: {backgroundImage: `url(${TS})`},},
+        {id: 3, skill: "TypeScript", about: "Lorem quis.", style: {backgroundImage: `url(${TS})`},},
+        {id: 3, skill: "JS", about: "Lorem quis.", style: {backgroundImage: `url(${JS})`},},
         {id: 4, skill: "HTML", about: "vel veritatis vitae?", style: {backgroundImage: `url(${HTML})`},},
         {id: 5, skill: "CSS", about: "vel veritatis vitae?", style: {backgroundImage: `url(${CSS})`},},
-        {id: 5, skill: "SCSS", about: "vel veritatis vitae?", style: {backgroundImage: `url(${MA})`},},
-        {id: 5, skill: "Material UI", about: "vel veritatis vitae?", style: {backgroundImage: `url(${SCSS})`},},
+        {id: 5, skill: "SCSS", about: "vel veritatis vitae?", style: {backgroundImage: `url(${SCSS})`},},
+        {id: 5, skill: "Material UI", about: "vel veritatis vitae?", style: {backgroundImage: `url(${MA})`},},
         {id: 5, skill: "Storybook", about: "vel veritatis vitae?", style: {backgroundImage: `url(${SB})`},},
     ]
     let skill = text.map(el => {

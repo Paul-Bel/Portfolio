@@ -3,40 +3,36 @@ import s from './Main.module.scss'
 import stylesContainer from '../common/styles/Container.module.scss'
 import {Header} from "../Header/Header";
 
+type stateType = [string, number, boolean]
 export const Main = () => {
-    const [info, setInfo] = useState<string>('')
-    // const [refresh, setRefresh] = useState<string>('')
-    const [count, setCount] = useState<number>(0)
-    const [change, setChange] = useState(true)
-
+    const [info, setInfo] = useState<stateType>(['', 0, true])
     useEffect(() => {
         let intervalID = setInterval(() => {
             let a = "front-end developer ()=>({ TS, JS, React, Redux })          "
-                if(change) {
-                    if (info !== a) {
-                        setInfo(info.concat(a[count]));
-                        setCount(count + 1)
-                    }
-                    if (info.length === a.length) {
-                        setChange(false)
-                    }
+            if (info[2]) {
+                if (info[0] !== a) {
+                    let copyInfo: stateType = [info[0].concat(a[info[1]]), (1 + info[1]), true]
+                    setInfo(copyInfo);
                 }
-                    if(!change) {
-                    if (info.length !== 0) {
-                        setInfo(info.substring(0, (info.length-1)));
-                        setCount(count - 1)
-                    }
-                    if (info.length === 0) {
-                        setChange(true)
-                    }
+                if (info[0].length === a.length) {
+                    setInfo([info[0], 0, false])
+                }
+            }
+            if (!info[2]) {
+                if (info[0].length !== 0) {
+                    let copyInfo: stateType = [info[0].substring(0, (info[0].length - 1)), 0, false]
+                    setInfo(copyInfo);
+                }
+                if (info[0].length === 0) {
+                    setInfo([info[0], 0, true])
+                }
             }
 
-        }, 100)
-
+        }, 150)
         return () => {
             clearInterval(intervalID)
         }
-    }, [info, count, change])
+    }, [info])
 
     return (
         <div className={s.mainblock} id={'1'}>
@@ -49,11 +45,11 @@ export const Main = () => {
                     </h1>
                     <p/>
                     <span className={s.text_aboutSecond}>
-                        {info}_
+                        {info[0]}_
                     </span>
                 </div>
                 <div className={s.photo}>
-                <div className={s.img}> </div>
+                    <div className={s.img}></div>
                 </div>
             </div>
         </div>
