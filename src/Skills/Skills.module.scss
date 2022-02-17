@@ -29,16 +29,20 @@
     .icon {
         margin: 0 auto;
         background-color: gray;
-        min-height: 80px;
-        width: 35%;
+        min-height: 170px;
+        width: 170px;
         align-items: center;
         text-align: center;
+        background-size: cover;
+        transform: rotate(45deg);
+
     }
     .about {
         @include flexFirstStyle(flex, column, wrap, normal, center);
          .aboutSkill {
             text-align: center;
         }
+
     }
 }
 
