@@ -43,6 +43,7 @@
     }
     & a {
       display: none;
+      transition: 1s;
     }
     &:hover {
       &::before {
@@ -50,6 +51,7 @@
       }
       a {
         @include text($fontFamilyPoppins, 700, inherit, 2.2);
+        transition: 1s;
         width: 120px;
         height: 40px;
         text-align: center;

@@ -45,7 +45,7 @@ export const Main = () => {
                     </h1>
                     <p/>
                     <span className={s.text_aboutSecond}>
-                        {info[0]}_
+                        {info[0]}|
                     </span>
                 </div>
                 <div className={s.photo}>

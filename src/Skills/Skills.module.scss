@@ -48,6 +48,7 @@
             transform: rotate(45deg);
             transform-origin: center;
             .img{
+                transition: 2s;
                 transform: rotate(315deg);
                 background-size: cover;
                 background-position: center;
@@ -55,15 +56,21 @@
                 height: 100%;
                 display: block;
             }
+            .img:hover{
+                transition: 2s;
+                width: 130%;
+                height: 130%;
+                transform: rotate(-45deg);
+            }
         }
         .aboutSkill{
-            //padding-top: 10px;
             text-align: center;
             & h3 {
+                transition: 0.4ms;
                 margin: 0 0 15px;
-                /* padding: 0; */
                 font-size: 16px;
             }
+
             .inconeDesc {
                 box-sizing: border-box;
             }

@@ -100,22 +100,25 @@
   .text_about {
     transition: 1s;
     margin: 15px;
-    @include text($fontFamilyJosefin, 700, 16px, 1px);
+    @include text($fontFamilyJosefin, 700, 22px, 1);
     @media screen and(max-width: 440px) {
       margin: 25px 35px;
-      @include text($fontFamilyJosefin, 300, 12px, 1px);
+      @include text($fontFamilyJosefin, 300, 16px, 1px);
     }
   }
 
   .text_aboutSecond {
-    margin: 15px 15px 25px 0;
+    margin-left: 10px;
+    display: inline-block;
+    width: 360px;
+    min-height: 40px;
 
-    @include text($fontFamilyJosefin, 700, 16px, 1px);
+    @include text($fontFamilyJosefin, 700, 22px, 1.5);
     @media screen and(max-width: 440px) {
-      margin: 15px 25px;
-      @include text($fontFamilyJosefin, 300, 12px, 1px);
+      margin: 15px 45px;
+      min-width: 350px;
+      @include text($fontFamilyJosefin, 300, 16px, 1);
     }
-    font-size: 14px;
   }
 
   .text_h1 {
