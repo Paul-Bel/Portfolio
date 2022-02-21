@@ -33,7 +33,7 @@
     width: 300px;
     display: flex;
     justify-content: space-between;
-    @media screen and (max-width: 440px){
+    @media screen and (max-width: 375px){
       margin: 0 45px 10px 0;
     }
     .menuItem {

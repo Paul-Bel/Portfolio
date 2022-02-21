@@ -20,18 +20,29 @@
     display: flex;
     justify-content: center;
 
+    .contactMe {
+      position: relative;
+
     .squares {
-      width: 30px;
-      height: 30px;
-      background-color: #bebbbb;
+      width: 40px;
+      height: 40px;
+      //background-color: #bebbbb;
+      position: absolute;
+      left: 0;
+      right: 0;
+
+      :hover{
+        cursor: pointer;
+      }
     }
 
     .square {
       width: 30px;
       height: 30px;
-      background-color: gray;
+      margin: 0 5px;
+      position: relative;
     }
-  }
+  }}
 }
 
 
