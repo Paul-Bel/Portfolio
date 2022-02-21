@@ -100,10 +100,10 @@
   .text_about {
     transition: 1s;
     margin: 15px;
-    @include text($fontFamilyJosefin, 700, 22px, 1);
+    @include text($fontFamilyJosefin, 700, 25px, 1);
     @media screen and(max-width: 440px) {
       margin: 25px 35px;
-      @include text($fontFamilyJosefin, 300, 16px, 1px);
+      @include text($fontFamilyJosefin, 300, 20px, 1px);
     }
   }
 
@@ -113,11 +113,11 @@
     width: 360px;
     min-height: 40px;
 
-    @include text($fontFamilyJosefin, 700, 22px, 1.5);
+    @include text($fontFamilyJosefin, 700, 25px, 1.5);
     @media screen and(max-width: 440px) {
       margin: 15px 45px;
       min-width: 350px;
-      @include text($fontFamilyJosefin, 300, 16px, 1);
+      @include text($fontFamilyJosefin, 300, 20px, 1);
     }
   }
 
