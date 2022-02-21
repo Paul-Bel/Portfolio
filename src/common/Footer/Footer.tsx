@@ -18,7 +18,7 @@ export const Footer = () => {
 
     const linksContact = links.map((m) => {
         return  <div key={m.id+m.profilePage} className={s.contactMe}> <img className={s.square} src={m.style} alt={m.profilePage}/>
-            <a className={s.squares} href={m.link} target={'_blank'}>   </a></div>
+            <a className={s.squares} href={m.link} target={'_blank'}/> </div>
     })
 
     return (
