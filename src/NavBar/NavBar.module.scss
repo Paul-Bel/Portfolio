@@ -28,11 +28,14 @@
   //  opacity: 0.9 /*border-radius: 0;*/;
   .listMenu {
     padding: 0 15px;
-    margin: 0 10px;
+    margin: 0 25px 10px 0;
     border: 1px solid $secondTextColor;
     width: 300px;
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 440px){
+      margin: 0 45px 10px 0;
+    }
     .menuItem {
       list-style-type: none;
     & a {
