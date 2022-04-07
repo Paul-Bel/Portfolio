@@ -5,6 +5,9 @@ type ButtonPropsType = { title: string }
 export const Button = (props: ButtonPropsType) => {
     const {title} = props
     return <>
-        <button className={s.button} type={"submit"}>{title}</button>
+        {title !== "send"
+            ?<a href={"#4"} className={s.button} type={"submit"}>{title}</a>
+            :<button className={s.button} type={"submit"}>{title}</button>
+        }
     </>
 }

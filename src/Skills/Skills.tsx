@@ -12,6 +12,7 @@ import SCSS from "../assets/img/SCSS.png";
 import JS from "../assets/img/js.png";
 import MA from "../assets/img/MA.png";
 import SB from "../assets/img/SB.svg";
+import {Fade} from "react-awesome-reveal";
 
 export const Skills = () => {
     const text = [
@@ -29,13 +30,18 @@ export const Skills = () => {
         return <Skill style={el.style} skill={el.skill} id={el.id} about={el.about}/>
     })
     return (
-        <div className={s.skillBlock} id={'2'} >
+        <div className={s.skillBlock} id={'2'}>
             <div className={`${stylesContainer.containerMain} ${s.container}`}>
                 <div className={s.skillItem}>
-                <Title title={' My skills'}/>
+                    <Fade direction={"up"} triggerOnce={false}>
+                        <Title title={' My skills'}/>
+                    </Fade>
                 </div>
                 <div className={s.skills}>
-                    {skill}
+                    <Fade direction={"up"} triggerOnce={false}>
+                        {skill}
+                    </Fade>
+
                 </div>
             </div>
         </div>

@@ -2,13 +2,18 @@ import React from "react";
 import s from './Contacts.module.scss'
 import {Title} from "../common/components/Title/Title";
 import {Button} from "../common/components/button/Button";
+import {Fade} from "react-awesome-reveal";
 
 export const Contacts = () => {
 
     return (
         <div className={s.block} id={"4"}>
             <div className={s.blockContact}>
-                <div><Title title={"Contacts"}/></div>
+                <div>
+                    <Fade direction={"up"} triggerOnce={false} duration={1500}>
+                        <Title title={"Contacts"}/>
+                    </Fade>
+                </div>
                 <form className={s.input}>
                     <input type="text" placeholder={"Name"}/>
                     <input type="text" placeholder={"E-mail"}/>
@@ -16,12 +21,6 @@ export const Contacts = () => {
                     <Button title={'send'}/>
                     {/*<button type={"submit"}>send</button>*/}
                 </form>
-
-                {/*<div className={s.button}>*/}
-                {/*    */}
-                {/*</div>*/}
-
-
             </div>
         </div>
     )
