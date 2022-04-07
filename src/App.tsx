@@ -11,8 +11,6 @@ import {Footer} from "./common/Footer/Footer";
 function App() {
     return (
         <div className="App">
-            {/*<Header/>*/}
-            {/*<NavBar/>*/}
             <Main/>
             <Skills/>
             <MyWorks/>

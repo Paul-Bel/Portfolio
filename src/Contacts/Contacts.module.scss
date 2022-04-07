@@ -3,9 +3,9 @@
 
 .block {
   background-color: $bgFirstColor;
-  padding: 10% 0;
+  padding: 5% 0 10% 0;
   border: 1px solid;
-  max-height: 75vh;
+  max-height: 60vh;
 
   .blockContact {
     animation-duration: 1.25s;
@@ -15,34 +15,37 @@
     margin: 0 auto;
     @include flexFirstStyle(flex, column, wrap, center, center);
     //align-content: space-around;
-    .input {
-      @include flexFirstStyle(flex, column, nowrap, space-around, flex-start);
+    .inputBlock {
+      //@include flexFirstStyle(flex, column, nowrap, space-around, flex-start);
       width: 70%;
       //min-height: 350px;
       border: 1px solid;
       padding-left: 7px;
-      & input {
-        margin: 6px 30px 6px 5px;
-        height: 24px;
-        width: 80%;
-        background-color: #252527;
-        border: 1px solid #4a4a4a;
-        color: $textColor;
-      }
+      .input {
+        width: 100%;
+        @include flexFirstStyle(flex, column, nowrap, space-around, flex-start);
+        & input {
+          margin: 6px 30px 6px 5px;
+          height: 24px;
+          width: 80%;
+          background-color: #252527;
+          border: 1px solid #4a4a4a;
+          color: $textColor;
+        }
 
-      & textarea {
-        color: $textColor;
-        margin: 0 30px 6px 5px;
-        max-width: 80%;
-        min-width: 80%;
-        min-height: 220px;
-        max-height: 263px;
-        background-color: #252527;
-        border: 1px solid #4a4a4a;
-        animation-delay: 0.9s;
-        animation-name: fadeInUp;
+        & textarea {
+          color: $textColor;
+          margin: 0 30px 6px 5px;
+          max-width: 80%;
+          min-width: 80%;
+          min-height: 220px;
+          max-height: 263px;
+          background-color: #252527;
+          border: 1px solid #4a4a4a;
+          animation-delay: 0.9s;
+          animation-name: fadeInUp;
+        }
       }
-
     }
   }
 }

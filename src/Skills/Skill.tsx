@@ -17,7 +17,7 @@ export const Skill = (props: SkillTypeProps) => {
                 </div>
                 <div className={s.aboutSkill}>
                     <h3>{props.skill}</h3>
-                    <div className={s.inconeDesc}> </div>
+                    <div className={s.inconeDesc}></div>
                 </div>
 
 

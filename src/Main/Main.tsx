@@ -2,6 +2,9 @@ import React, {useEffect, useState} from "react";
 import s from './Main.module.scss'
 import stylesContainer from '../common/styles/Container.module.scss'
 import {Header} from "../Header/Header";
+import {Fade, Zoom} from "react-awesome-reveal";
+import Particles from "react-tsparticles";
+
 
 type stateType = [string, number, boolean]
 export const Main = () => {
@@ -27,30 +30,34 @@ export const Main = () => {
                     setInfo([info[0], 0, true])
                 }
             }
-
         }, 150)
         return () => {
             clearInterval(intervalID)
         }
     }, [info])
 
+
     return (
-        <div className={s.mainblock} id={'1'}>
+        <div className={s.mainblock} id={"1"}>
             <Header/>
             <div className={stylesContainer.containerMain}>
                 <div className={s.about}>
-                    <span className={s.text_about}>Hi There</span>
-                    <h1 className={s.text_h1}>I am
-                        <span className={s.name}> Paul Beloborodov </span>
-                    </h1>
-                    <p/>
-                    <span className={s.text_aboutSecond}>
+                    <Zoom triggerOnce={false}>
+                        <span className={s.text_about}>Hi There</span>
+                        <h1 className={s.text_h1}>I am
+                            <span className={s.name}> Paul Beloborodov </span>
+                        </h1>
+                        <p/>
+                        <span className={s.text_aboutSecond}>
                         {info[0]}|
                     </span>
+                    </Zoom>
                 </div>
-                <div className={s.photo}>
-                    <div className={s.img}></div>
-                </div>
+                <Fade direction={"right"} triggerOnce={false}>
+                    <div className={s.photo}>
+                        <div className={s.img}></div>
+                    </div>
+                </Fade>
             </div>
         </div>
     )

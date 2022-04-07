@@ -14,6 +14,8 @@ export const Contacts = () => {
                         <Title title={"Contacts"}/>
                     </Fade>
                 </div>
+                <Fade direction={"left"} triggerOnce={false} duration={1500} className={s.inputBlock}>
+
                 <form className={s.input}>
                     <input type="text" placeholder={"Name"}/>
                     <input type="text" placeholder={"E-mail"}/>
@@ -21,6 +23,8 @@ export const Contacts = () => {
                     <Button title={'send'}/>
                     {/*<button type={"submit"}>send</button>*/}
                 </form>
+                </Fade>
+
             </div>
         </div>
     )
