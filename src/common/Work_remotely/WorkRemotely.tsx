@@ -5,8 +5,6 @@ import {Button} from "../components/button/Button";
 import {Fade} from "react-awesome-reveal";
 
 export const WorkRemotely = () => {
-
-
     return (
         <div className={s.block}>
             <div className={s.container}>
@@ -19,10 +17,7 @@ export const WorkRemotely = () => {
                     <Fade direction={"up"} triggerOnce={false}>
                         <Button title={'hire me'}/>
                     </Fade>
-
                 </div>
-
-
             </div>
         </div>
     )
