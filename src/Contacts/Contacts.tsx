@@ -8,12 +8,12 @@ import axios from "axios";
 export const Contacts = () => {
     const [disabled, setDisabled] = useState<boolean>(false)
     const [alertMesage, setAlertMessage] = useState<boolean>(true)
-    const [count, setCount] = useState<number>(0|Number(localStorage.getItem('count')))
+    const [count, setCount] = useState<number>(Number(localStorage.getItem('count'))|0)
     const sendHandlet = (e: FormEvent<HTMLFormElement>) => {
         let formData = new FormData(e.currentTarget)
         let [name, email, message]: any = [formData.get("name"), formData.get("email"), formData.get("message")]
         let sends = Number(localStorage.getItem('count'))
-        if (sends >= 2) return alert("You have already sent two messages, use the contacts below")
+        if (sends > 1) return alert("You have already sent two messages, use the contacts below")
         if (name.length !== 0 && email.length !== 0 && message.length !== 0) {
             setDisabled(true)
             axios.post('https://my-smtp-server-nodejs-2022.herokuapp.com/sendMessage', {from: name, subject: email, text: message})
@@ -28,7 +28,7 @@ export const Contacts = () => {
         }
     }
     useEffect(() => {
-        if(count !== 0 && count < 3){
+        if(count !== 0 && count < 2){
             setAlertMessage(false)
             var message = setInterval(() => {
                 setAlertMessage(true)
@@ -47,7 +47,7 @@ export const Contacts = () => {
                         <Title title={"Contacts"}/>
                     </Fade>
                 </div>
-                {alertMesage && count <=2
+                {alertMesage && count <2
                     ?<Fade direction={"left"} triggerOnce={false} duration={1500} className={s.inputBlock}>
                     <form className={s.input} onSubmit={sendHandlet}>
                         <input type="text" placeholder={"Name"} name={"name"}/>
