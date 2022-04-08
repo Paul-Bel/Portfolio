@@ -6,24 +6,27 @@
   padding: 5% 0 10% 0;
   border: 1px solid;
   max-height: 60vh;
+  @media screen and (max-width: 380px) {
+    padding: 0 0 10% 0;
+    min-height: 63vh;
+  }
 
   .blockContact {
     animation-duration: 1.25s;
     min-height: 68vh;
     width: 80%;
-    //border: 1px solid $textColor;
     margin: 0 auto;
     @include flexFirstStyle(flex, column, wrap, center, center);
-    //align-content: space-around;
+
     .inputBlock {
-      //@include flexFirstStyle(flex, column, nowrap, space-around, flex-start);
       width: 70%;
-      //min-height: 350px;
       border: 1px solid;
       padding-left: 7px;
+
       .input {
         width: 100%;
         @include flexFirstStyle(flex, column, nowrap, space-around, flex-start);
+
         & input {
           margin: 6px 30px 6px 5px;
           height: 24px;

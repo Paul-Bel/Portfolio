@@ -15,14 +15,7 @@ export const Skill = (props: SkillTypeProps) => {
                 <div className={s.iconBox}>
                     <i style={props.style} className={s.img}> </i>
                 </div>
-                <div className={s.aboutSkill}>
-                    <h3>{props.skill}</h3>
-                    <div className={s.inconeDesc}></div>
-                </div>
-
-
-                {/*<span className={s.aboutSkill}>{props.about}</span>*/}
-
+                <h3 className={s.aboutSkill}>{props.skill}</h3>
             </div>
 
         </div>

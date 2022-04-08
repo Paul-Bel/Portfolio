@@ -23,7 +23,7 @@ export const Skills = () => {
         {id: 4, skill: "HTML", about: "vel veritatis vitae?", style: {backgroundImage: `url(${HTML})`},},
         {id: 5, skill: "CSS", about: "vel veritatis vitae?", style: {backgroundImage: `url(${CSS})`},},
         {id: 5, skill: "SCSS", about: "vel veritatis vitae?", style: {backgroundImage: `url(${SCSS})`},},
-        {id: 5, skill: "Material UI", about: "vel veritatis vitae?", style: {backgroundImage: `url(${MA})`},},
+        {id: 5, skill: "MUI", about: "vel veritatis vitae?", style: {backgroundImage: `url(${MA})`},},
         {id: 5, skill: "Storybook", about: "vel veritatis vitae?", style: {backgroundImage: `url(${SB})`},},
     ]
     let skill = text.map(el => {
@@ -39,7 +39,9 @@ export const Skills = () => {
                 </div>
                 <div className={s.skills}>
                     <Fade direction={"up"} triggerOnce={false}>
+
                         {skill}
+
                     </Fade>
 
                 </div>
