@@ -19,8 +19,8 @@ export const Contacts = () => {
             axios.post('https://my-smtp-server-nodejs-2022.herokuapp.com/sendMessage', {from: name, subject: email, text: message})
                 .then(res => {
                     console.log((res.data))
-                    setCount(count => count + 1)
-                    localStorage.setItem('count', count.toLocaleString())
+                    setCount(count + 1)
+                    localStorage.setItem('count', (count+1).toLocaleString())
                 })
                 .catch(err => alert('try later'))
                 .finally(() => setDisabled(false))
@@ -38,7 +38,8 @@ export const Contacts = () => {
             clearInterval(message)
         }
     },[count])
-
+    console.log('2222222222222',count)
+    console.log('2222222222222',!alertMesage)
     return (
         <div className={s.block} id={"4"}>
             <div className={s.blockContact}>
@@ -47,19 +48,19 @@ export const Contacts = () => {
                         <Title title={"Contacts"}/>
                     </Fade>
                 </div>
-                {alertMesage && count <2
+                {alertMesage && count < 2
                     ?<Fade direction={"left"} triggerOnce={false} duration={1500} className={s.inputBlock}>
-                    <form className={s.input} onSubmit={sendHandlet}>
-                        <input type="text" placeholder={"Name"} name={"name"}/>
-                        <input type="text" placeholder={"E-mail"} name={"email"}/>
-                        <textarea placeholder={"Your message"} name={"message"}/>
-                        <Button disabled={disabled} title={'send'}/>
-                    </form>
-                </Fade>
+                        <form className={s.input} onSubmit={sendHandlet}>
+                            <input type="text" placeholder={"Name"} name={"name"}/>
+                            <input type="text" placeholder={"E-mail"} name={"email"}/>
+                            <textarea placeholder={"Your message"} name={"message"}/>
+                            <Button disabled={disabled} title={'send'}/>
+                        </form>
+                    </Fade>
                 :<Fade direction={"top-left"} triggerOnce={false} duration={1500} className={s.inputBlock}
-                      style={{border: "none"}}>
-                    <div className={s.alert}>Thank you for your letter. I will definitely contact you.</div>
-                </Fade>}
+                       style={{border: "none"}}>
+                        <div className={s.alert}>Thank you for your letter. I will definitely contact you.</div>
+                    </Fade>}
             </div>
         </div>
     )
