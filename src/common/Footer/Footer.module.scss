@@ -2,13 +2,13 @@
 @import "src/common/styles/mixin";
 
 .footer {
-  height: 100px;
+  height: 105px;
   background-color: $bgSecondColor;
   display: flex;
   justify-content: center;
   text-align: center;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 0 0 0;
   color: $textColor;
   & h3 {
     @include text($fontFamilyJosefin, 500, 12px, 1px);

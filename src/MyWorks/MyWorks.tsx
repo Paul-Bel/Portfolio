@@ -32,7 +32,7 @@ export const MyWorks = () => {
         {
             id: 2,
             title: 'Social Network',
-            about: ' Using TypeScript for best code control; Reusable components development; Refactoring, bug fixing, deploying; Organizing correct app architecture; ',
+            about: ' Using TypeScript for best code control; Reusable components development; Refactoring, bug fixing, deploying; Organizing correct app architecture',
             divStyle: {backgroundImage: `url(${Social})`},
             project: 'https://paul-bel.github.io/SocialNetworkPrototype/',
             img: `${Social}`,

@@ -4,7 +4,7 @@ import IN from '../../assets/img/forLinks/linkedIn.png'
 import HH from '../../assets/img/forLinks/HeadHunter_logo.png'
 import Tel from '../../assets/img/forLinks/telegram.svg'
 import GH from '../../assets/img/forLinks/GH.png'
-import {Fade, AttentionSeeker} from "react-awesome-reveal";
+import {AttentionSeeker} from "react-awesome-reveal";
 
 const links = [
     {id: 1, profilePage: 'Linkedin', link: 'https://www.linkedin.com/in/paul-beloborodov-b9812921a/', style: `${IN}`},
@@ -23,14 +23,15 @@ const links = [
 export const Footer = () => {
 
     const linksContact = links.map((m) => {
-        return <div key={m.id + m.profilePage} className={s.contactMe}><img className={s.square} src={m.style}
-                                                                            alt={m.profilePage}/>
+        return <div key={m.id + m.profilePage} className={s.contactMe}>
+            <img className={s.square} src={m.style}
+                 alt={m.profilePage}/>
             <a className={s.squares} href={m.link} target={'_blank'}/></div>
     })
 
     return (
         <div className={s.footer}>
-            <AttentionSeeker effect={"bounce"} triggerOnce={false} duration={1500} className={s.input}>
+            <AttentionSeeker effect={"bounce"} triggerOnce={false} duration={1500}>
                 <div>
                     <h3>Paul Beloborodov</h3>
                     <div className={s.containerSqu}>
