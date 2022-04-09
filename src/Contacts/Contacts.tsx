@@ -5,7 +5,7 @@ import {Button} from "../common/components/button/Button";
 import {Fade, Zoom} from "react-awesome-reveal";
 import axios from "axios";
 
-type CgangeStatusType = 'disabled' | 'alert' | 'error' | ''
+type CgangeStatusType = 'disabled' | 'alert' | 'errorName' | 'errorEmail' | 'errorMessage' | ''
 
 export const Contacts = () => {
     const [changeStatus, setChangeStatus] = useState<CgangeStatusType>('')
@@ -31,7 +31,9 @@ export const Contacts = () => {
                 .finally(() => setChangeStatus(''))
             e.preventDefault()
         } else {
-            setChangeStatus('error')
+            if(name.length === 0) {setChangeStatus('errorName')}
+            if(email.length === 0) {setChangeStatus('errorEmail')}
+            if(message.length === 0) {setChangeStatus('errorMessage')}
             e.preventDefault()
         }
     }
@@ -55,23 +57,23 @@ export const Contacts = () => {
                     <Fade direction={"up"} triggerOnce={false} duration={1500}>
                         <Title title={"Contacts"}/>
                     </Fade>
-                    {changeStatus !== 'error' ? <div className={s.error}/>
-                        :<Zoom direction={"up"} triggerOnce={false} duration={1500}>
-                        <div className={s.error}>заполните все поля</div>
-                        </Zoom>}
                 </div>
                 {changeStatus !== 'alert' && count < 2
                     ? <Fade direction={"left"} triggerOnce={false} duration={1500} className={s.inputBlock}>
                         <form className={s.input} onSubmit={sendHandlet}>
-                            <input type="text" placeholder={"Name"} name={"name"} onTouchEnd={onChangeStatus}/>
-                            <input type="text" placeholder={"E-mail"} name={"email"} onTouchEnd={onChangeStatus}/>
-                            <textarea placeholder={"Your message"} name={"message"} onTouchEnd={onChangeStatus}/>
+                            <input type="text" placeholder={"*Name"} name={"name"} onTouchEnd={onChangeStatus}
+                                   className={changeStatus === 'errorName' ? s.errors : ''}/>
+                            <input type="text" placeholder={"*E-mail"} name={"email"} onTouchEnd={onChangeStatus}
+                                   className={changeStatus === 'errorEmail' ? s.errors : ''}/>
+                            <textarea placeholder={"*Your message"} name={"message"} onTouchEnd={onChangeStatus}
+                                      className={changeStatus === 'errorMessage' ? s.errors : ''}/>
                             <Button disabled={changeStatus} title={'send'}/>
                         </form>
                     </Fade>
                     : <Fade direction={"top-left"} triggerOnce={false} duration={1500} className={s.inputBlock}
                             style={{border: "none"}}>
-                        <div className={s.alert}>Thank you for your letter. I will definitely contact you.</div>
+                        <div className={s.alert} >Thank you for your letter. I will definitely contact you
+                            <span onDoubleClick={()=>localStorage.setItem('count', '0')}>.</span></div>
                     </Fade>}
             </div>
         </div>

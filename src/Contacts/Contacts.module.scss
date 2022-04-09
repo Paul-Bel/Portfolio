@@ -18,7 +18,8 @@
     margin: 0 auto;
     padding: 10px 0 0 0;
     @include flexFirstStyle(flex, column, wrap, center, center);
-    .alert{
+
+    .alert {
       color: white;
       @include text($fontFamilyPoppins, 700, inherit, 3);
       width: 100%;
@@ -29,12 +30,14 @@
       border: 1px solid;
       box-shadow: 20px 20px 10px;
     }
-    .error{
-      color:white;
+
+    .error {
+      color: white;
       height: 25px;
       @include text($fontFamilyPoppins, 300, inherit, 1);
 
     }
+
     .inputBlock {
       width: 70%;
       border: 1px solid;
@@ -43,7 +46,9 @@
       .input {
         width: 100%;
         @include flexFirstStyle(flex, column, nowrap, space-around, flex-start);
-
+        .errors {
+          border: 1px solid red;
+        }
         & input {
           margin: 6px 30px 6px 5px;
           height: 24px;
