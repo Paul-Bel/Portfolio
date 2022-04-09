@@ -63,7 +63,7 @@ export const Contacts = () => {
                         <form className={s.input} onSubmit={sendHandlet}>
                             <input type="text" placeholder={"*Name"} name={"name"} onTouchEnd={onChangeStatus}
                                    className={changeStatus === 'errorName' ? s.errors : ''}/>
-                            <input type="text" placeholder={"*E-mail"} name={"email"} onTouchEnd={onChangeStatus}
+                            <input type="text" placeholder={"*Email"} name={"email"} onTouchEnd={onChangeStatus}
                                    className={changeStatus === 'errorEmail' ? s.errors : ''}/>
                             <textarea placeholder={"*Your message"} name={"message"} onTouchEnd={onChangeStatus}
                                       className={changeStatus === 'errorMessage' ? s.errors : ''}/>
