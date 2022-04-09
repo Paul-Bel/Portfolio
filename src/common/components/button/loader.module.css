@@ -18,7 +18,7 @@
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
-    right: 15px;
+    right: 13px;
     bottom: 240px;
 }
 .loader:before {

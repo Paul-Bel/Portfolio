@@ -12,7 +12,7 @@ export const Button = (props: ButtonPropsType) => {
             :<><button disabled={disabled === "disabled"}
                      className={disabled==='disabled'? s.button+' '+s.disabled: s.button}
                      type={"submit"}> {title}</button>
-                {disabled==='disabled' && <div className={l.loader}/>}
+                {disabled!=='disabled' && <div className={l.loader}/>}
             </>
         }
     </>
