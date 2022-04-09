@@ -72,7 +72,7 @@ export const Contacts = () => {
                     </Fade>
                     : <Fade direction={"bottom-right"} triggerOnce={false} duration={1500} className={s.inputBlock}
                             style={{border: "none"}}>
-                        <div className={s.alert} ><div>Thank you for your letter.</div>
+                        <div className={s.alert} ><div>Thanks for your letter.</div>
                             <div onDoubleClick={()=>localStorage.setItem('count', '0')}>I will definitely contact you.</div>
                             </div>
                     </Fade>}
