@@ -9,7 +9,6 @@ type WorkPropsType = {
     img: string }
 
 export const MyWork = (props: WorkPropsType) => {
-    console.log(props.project)
     return (
         <div className={s.work}>
             <div className={s.img}>

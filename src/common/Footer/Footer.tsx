@@ -26,7 +26,8 @@ export const Footer = () => {
         return <div key={m.id + m.profilePage} className={s.contactMe}>
             <img className={s.square} src={m.style}
                  alt={m.profilePage}/>
-            <a className={s.squares} href={m.link} target={'_blank'}/></div>
+            <a className={s.squares} href={m.link} target={'_blank'}/>
+                </div>
     })
 
     return (

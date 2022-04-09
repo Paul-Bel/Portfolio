@@ -29,6 +29,12 @@
       border: 1px solid;
       box-shadow: 20px 20px 10px;
     }
+    .error{
+      color:white;
+      height: 25px;
+      @include text($fontFamilyPoppins, 300, inherit, 1);
+
+    }
     .inputBlock {
       width: 70%;
       border: 1px solid;
