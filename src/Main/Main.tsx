@@ -11,7 +11,7 @@ export const Main = () => {
     const [info, setInfo] = useState<stateType>(['', 0, true])
     useEffect(() => {
         let intervalID = setInterval(() => {
-            let a = "front-end developer () => ({ TS, JS, React, Redux })          "
+            let a = "front-end developer () => { TS, JS, React, Redux }          "
             if (info[2]) {
                 if (info[0] !== a) {
                     let copyInfo: stateType = [info[0].concat(a[info[1]]), (1 + info[1]), true]
