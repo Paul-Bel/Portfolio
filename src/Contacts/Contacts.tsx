@@ -2,15 +2,15 @@ import React, {FormEvent, useEffect, useState} from "react";
 import s from './Contacts.module.scss'
 import {Title} from "../common/components/Title/Title";
 import {Button} from "../common/components/button/Button";
-import {Fade, Zoom} from "react-awesome-reveal";
+import {Fade} from "react-awesome-reveal";
 import axios from "axios";
 
-type CgangeStatusType = 'disabled' | 'alert' | 'errorName' | 'errorEmail' | 'errorMessage' | ''
+type ChangeStatusType = 'disabled' | 'alert' | 'errorName' | 'errorEmail' | 'errorMessage' | ''
 
 export const Contacts = () => {
-    const [changeStatus, setChangeStatus] = useState<CgangeStatusType>('')
+    const [changeStatus, setChangeStatus] = useState<ChangeStatusType>('')
     const [count, setCount] = useState<number>(Number(localStorage.getItem('count')) | 0)
-    const sendHandlet = (e: FormEvent<HTMLFormElement>) => {
+    const sendHandler = (e: FormEvent<HTMLFormElement>) => {
         let formData = new FormData(e.currentTarget)
         let [name, email, message]: any = [formData.get("name"), formData.get("email"), formData.get("message")]
         let sends = Number(localStorage.getItem('count'))
@@ -60,10 +60,10 @@ export const Contacts = () => {
                 </div>
                 {changeStatus !== 'alert' && count < 2
                     ? <Fade direction={"left"} triggerOnce={false} duration={1500} className={s.inputBlock}>
-                        <form className={s.input} onSubmit={sendHandlet}>
+                        <form className={s.input} onSubmit={sendHandler}>
                             <input type="text" placeholder={"*Name"} name={"name"} onTouchEnd={onChangeStatus}
                                    className={changeStatus === 'errorName' ? s.errors : ''}/>
-                            <input type="text" placeholder={"*Email"} name={"email"} onTouchEnd={onChangeStatus}
+                            <input type="email" placeholder={"*Email"} name={"email"} onTouchEnd={onChangeStatus}
                                    className={changeStatus === 'errorEmail' ? s.errors : ''}/>
                             <textarea placeholder={"*Your message"} name={"message"} onTouchEnd={onChangeStatus}
                                       className={changeStatus === 'errorMessage' ? s.errors : ''}/>
