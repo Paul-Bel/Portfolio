@@ -6,7 +6,10 @@ import TDIMG from '../assets/img/TDList.jpg'
 import Social from '../assets/img/Social.jpg'
 import Dis from '../assets/img/Dispex.jpg'
 import Cont from '../assets/img/Cont.jpg'
-import CH from '../assets/img/CozyHouse .jpg'
+import CH from '../assets/img/CozyHouse.jpg'
+import SomeProj from '../assets/img/SomePoj.jpg'
+import Messenger from '../assets/img/Messeg.jpg'
+import ContactMap from '../assets/img/ContactMap.jpg'
 import {Fade} from "react-awesome-reveal";
 import React from "react";
 
@@ -54,6 +57,27 @@ export const MyWorks = () => {
             img: `${Cont}`,
         }, {
             id: 5,
+            title: 'Web messenger',
+            about: 'An example of a web messenger page being developed',
+            divStyle: {backgroundImage: `url(${Messenger})`},
+            project: 'https://paul-bel.github.io/WebChat/',
+            img: `${Messenger}`,
+        }, {
+            id: 6,
+            title: 'Random Case',
+            about: 'Several projects with different functionality',
+            divStyle: {backgroundImage: `url(${SomeProj})`},
+            project: 'https://paul-bel.github.io/Random_Cases/',
+            img: `${SomeProj}`,
+        },{
+            id: 7,
+            title: 'Contact map',
+            about: 'Contact map with two filters and the ability to edit user data',
+            divStyle: {backgroundImage: `url(${ContactMap})`},
+            project: 'https://paul-bel.github.io/_Roox/',
+            img: `${ContactMap}`,
+        },{
+            id: 8,
             title: 'Dispex',
             about: 'Not a large test project using data from the server of the managing organization',
             divStyle: {backgroundImage: `url(${Dis})`},
