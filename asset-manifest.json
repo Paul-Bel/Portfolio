@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.794f003a.css",
-    "main.js": "/Portfolio/static/js/main.39f94110.js",
+    "main.js": "/Portfolio/static/js/main.fef06a68.js",
     "static/js/787.85be7cd2.chunk.js": "/Portfolio/static/js/787.85be7cd2.chunk.js",
     "static/media/Portfolio_startPage.gif": "/Portfolio/static/media/Portfolio_startPage.9e77515fd9b9da94939c.gif",
     "static/media/Messeg.jpg": "/Portfolio/static/media/Messeg.74078c7927179a99dc29.jpg",
@@ -19,7 +19,6 @@
     "static/media/ContactMap.jpg": "/Portfolio/static/media/ContactMap.f0005d0fb0cb3b5a0ab1.jpg",
     "static/media/GH.png": "/Portfolio/static/media/GH.cb878dccf56e08d5dfc2.png",
     "static/media/Social.jpg": "/Portfolio/static/media/Social.3f2b83cb1e8c5651f966.jpg",
-    "static/media/HeadHunter_logo.png": "/Portfolio/static/media/HeadHunter_logo.d0cc35f31f85470613a6.png",
     "static/media/MA.png": "/Portfolio/static/media/MA.5b2d8a0a309d9f7d47c1.png",
     "static/media/React.svg": "/Portfolio/static/media/React.492a9a491239fea9fcd8931b0676c98f.svg",
     "static/media/SB.svg": "/Portfolio/static/media/SB.4bd264e8d311e3b77f80ca45ae3a5d1d.svg",
@@ -27,11 +26,11 @@
     "index.html": "/Portfolio/index.html",
     "static/media/telegram.svg": "/Portfolio/static/media/telegram.89d23a21f9cbdc309acc7e6db5d0a5fc.svg",
     "main.794f003a.css.map": "/Portfolio/static/css/main.794f003a.css.map",
-    "main.39f94110.js.map": "/Portfolio/static/js/main.39f94110.js.map",
+    "main.fef06a68.js.map": "/Portfolio/static/js/main.fef06a68.js.map",
     "787.85be7cd2.chunk.js.map": "/Portfolio/static/js/787.85be7cd2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.794f003a.css",
-    "static/js/main.39f94110.js"
+    "static/js/main.fef06a68.js"
   ]
 }
